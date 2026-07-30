@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<AITargetingHeuristic
+    id="ClosestEnemyAircraftHeuristic"
+    HeuristicType="EnemyUnit"
+    VitalKindOf="AIRCRAFT"
+    RequireUniqueTarget="true"
+    Location="Land"
+    />
+
+	<AIStrategicStateDefinition
+    id="JapanAirDefence"
+    MaxTargets="1">
+		<Heuristic>
+			<IntervalHeuristic IntervalTime="20s" ActiveTime="40s"/>
+			<ObjectOfTypeExistsHeuristic
+			  PassIfExists="true">
+				<ObjectFilter
+							Relationship="ENEMIES"
+							Rule="ANY" >
+					<IncludeThing>SovietAntiGroundAircraft</IncludeThing>
+					<IncludeThing>AlliedSupportAircraft</IncludeThing>
+					<IncludeThing>JapanAntiAirVehicleTech1</IncludeThing>
+					<IncludeThing>JapanAntiInfantryVehicle</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		<TargetHeuristic TargetHeuristic="ClosestEnemyAircraftHeuristic"/>
+		<Tactic id="Attack" Tactic="DefenseAvoidanceAttack" EndBehavior="DISBAND" DisbandAfterRetreatTeamSize="999">
+			<TeamTemplate MinUnits="1" MaxUnits="10"
+						IncludeKindOf="CAN_ATTACK" ExcludeKindOf="IGNORES_SELECT_ALL HARVESTER"
+						AllowedLocomotorTypes="AIR LAND AMPHIBIOUS"
+						Priority="LOW" AlwaysRecruit="true" SortByDistance="false"
+						MicroManager="FighterAircraftMicroManager">
+				<CreateUnits UnitName="JapanAntiInfantryVehicle" MinUnits="1" MaxUnits="1"/>
+				<ObjectFilter Rule="ANY">
+					<IncludeThing>JapanAntiInfantryVehicle</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+	<AIStrategicStateDefinition
+	  id="JapanAirDefence_SP"
+	  MaxTargets="1">
+		<Heuristic>
+			<IntervalHeuristic IntervalTime="90s" ActiveTime="30s"/>
+			<ObjectOfTypeExistsHeuristic
+			  PassIfExists="true">
+				<ObjectFilter
+							Relationship="ENEMIES"
+							Rule="ANY" >
+					<IncludeThing>SovietFighterAircraft</IncludeThing>
+					<IncludeThing>AlliedFighterAircraft</IncludeThing>
+					<IncludeThing>AlliedFighterAircraft</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		<TargetHeuristic TargetHeuristic="ClosestAircraftHeuristic"/>
+		<Tactic id="Attack" Tactic="DefenseAvoidanceAttack" EndBehavior="DISBAND" DisbandAfterRetreatTeamSize="999">
+			<TeamTemplate MinUnits="1" MaxUnits="1"
+						IncludeKindOf="CAN_ATTACK" ExcludeKindOf="IGNORES_SELECT_ALL HARVESTER"
+						AllowedLocomotorTypes="LAND AMPHIBIOUS"
+						Priority="LOW" AlwaysRecruit="true" SortByDistance="false"
+						MicroManager="FighterAircraftMicroManager">
+				<CreateUnits UnitName="JapanAntiAirVehicleTech1" MinUnits="1" MaxUnits="1"/>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+</AssetDeclaration>

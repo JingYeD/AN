@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="1AlliedBalanced.xml" />
+		<Include type="all" source="1JapanBalanced.xml" />
+		<Include type="all" source="1SovietBalanced.xml" />
+		<Include type="all" source="2AlliedSquadronLeader.xml" />
+		<Include type="all" source="2JapanMechaWarfare.xml" />
+		<Include type="all" source="2SovietShockSpecialist.xml" />
+		<Include type="all" source="3AlliedSpecialForces.xml" />
+		<Include type="all" source="3JapanFleetCommand.xml" />
+		<Include type="all" source="3SovietAirMarshall.xml" />
+      </Includes>
+</AssetDeclaration>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="AlliedCoopBaseCampaignPersonality.xml" />
+		<Include type="all" source="AlliedCoopBasePersonality.xml" />
+		<Include type="all" source="AlliedCoopBaseSkirmishPersonality.xml" />
+		<Include type="all" source="AlliedSoloBasePersonality.xml" />
+		<Include type="all" source="BasePersonality.xml" />
+		<Include type="all" source="CoopBasePersonality.xml" />
+		<Include type="all" source="JapanCoopBaseCampaignPersonality.xml" />
+		<Include type="all" source="JapanCoopBasePersonality.xml" />
+		<Include type="all" source="JapanCoopBaseSkirmishPersonality.xml" />
+		<Include type="all" source="JapanSoloBasePersonality.xml" />
+		<Include type="all" source="SoloBasePersonality.xml" />
+		<Include type="all" source="SovietCoopBaseCampaignPersonality.xml" />
+		<Include type="all" source="SovietCoopBasePersonality.xml" />
+		<Include type="all" source="SovietCoopBaseSkirmishPersonality.xml" />
+		<Include type="all" source="SovietSoloBasePersonality.xml" />
+      </Includes>
+</AssetDeclaration>

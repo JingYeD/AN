@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<SkirmishOpeningMove
+        id="FixJapanStandardD1_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD2_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD3_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD4a_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiVehicleInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD4b_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiVehicleInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD4c_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD5a_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiVehicleInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD5b_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiVehicleInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD5c_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD6a_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiVehicleInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD6b_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanAntiVehicleInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+	<SkirmishOpeningMove
+        id="FixJapanStandardD6c_BRUTAL"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanEngineer" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanScoutInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Time="25s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="30s" Account="PRODUCTION" Deposit="1500" />
+		<Order Time="75s" Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="115s" Account="PRODUCTION" Deposit="800" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="135s" Account="PRODUCTION" Deposit="600" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+
+</AssetDeclaration>

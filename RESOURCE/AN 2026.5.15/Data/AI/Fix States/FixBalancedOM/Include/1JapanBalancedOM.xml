@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<AIPersonalityDefinition id="TempContainer_FixJapanStandard">
+	<OpeningMove Name="FixJapanStandardA1" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardA2" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardA3" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardA4" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardA5" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardA6" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardB1" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardB2" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardB3" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardB4" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardB5" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardB6" Weight="2.70%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+			<ObjectOfTypeExistsHeuristic PassIfExists="false">
+				<ObjectFilter
+				    Relationship="ENEMIES"
+				    Rule="ANY" >
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+	</OpeningMove>
+
+    <OpeningMove Name="FixJapanStandardC1" Weight="2.78%" Difficulty="MEDIUM HARD">
+        <Heuristic>
+	        <PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+	    </Heuristic>
+    </OpeningMove>
+	<OpeningMove Name="FixJapanStandardC2" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC3" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC4a" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC4b" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC4c" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC5a" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC5b" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC5c" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC6a" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC6b" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardC6c" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD1" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD2" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD3" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD4a" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD4b" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD4c" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD5a" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD5b" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD5c" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD6a" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD6b" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	<OpeningMove Name="FixJapanStandardD6c" Weight="2.78%" Difficulty="MEDIUM HARD">
+		<Heuristic>
+			<PathToTargetHeuristic PathExists="true" ObjectTypeToUseForTest="SovietAntiInfantryInfantry" LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+	</OpeningMove>
+	</AIPersonalityDefinition>
+
+</AssetDeclaration>

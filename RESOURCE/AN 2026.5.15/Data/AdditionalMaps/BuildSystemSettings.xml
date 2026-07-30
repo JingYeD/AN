@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<BuildSystemSettings
+		id="Settings_BuildSystem"
+		AllowedHeightVariationForBuildingPlacement="80"
+		BuildabilityDisplayRadius="200">
+	</BuildSystemSettings>
+
+</AssetDeclaration>

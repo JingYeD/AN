@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+		<Include type="instance" source="FixBalancedOM/index.xml" />
+	</Includes>
+
+	<SkirmishOpeningMove
+        id="FixAlliedVindicatorRush"
+        Side="PlayerTemplate:Allies">
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<!--
+    <Order Time="90s" />
+    -->
+		<Order Time="120s" />
+		<Order Build="AlliedBarracks" />
+		<Order Time="130s" Account="PRODUCTION" Deposit="3000"/>
+		<Order Time="150s"/>
+	</SkirmishOpeningMove>
+	
+	<SkirmishOpeningMove
+		id="FixAlliedVindicatorRush_BRUTAL"
+		Side="PlayerTemplate:Allies">
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<!--
+    <Order Time="90s" />
+    -->
+		<Order Time="120s" />
+		<Order Build="AlliedBarracks" />
+		<Order Time="130s" Account="PRODUCTION" Deposit="5000"/>
+		<Order Time="150s"/>
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+        id="FixAlliedVindicatorRushVsJapan"
+        Side="PlayerTemplate:Allies">
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedFighterAircraft" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedFighterAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedFighterAircraft" />
+		<!--
+    <Order Time="90s" />
+    -->
+		<Order Time="120s" />
+		<Order Build="AlliedBarracks" />
+		<Order Time="130s" Account="PRODUCTION" Deposit="1000"/>
+		<Order Time="150s" Account="PRODUCTION" Deposit="1000"/>
+		<Order Time="170s" Account="PRODUCTION" Deposit="1000"/>
+		<Order Time="190s" />
+		<Order Build="AlliedWarFactory" />
+		<Order Time="210s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+		id="FixAlliedVindicatorRushVsJapan_BRUTAL"
+		Side="PlayerTemplate:Allies">
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedFighterAircraft" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedAirfield" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedFighterAircraft" />
+		<Order Build="AlliedAntiGroundAircraft" />
+		<Order Build="AlliedFighterAircraft" />
+		<!--
+    <Order Time="90s" />
+    -->
+		<Order Time="120s" />
+		<Order Build="AlliedBarracks" />
+		<Order Time="130s" Account="PRODUCTION" Deposit="2000"/>
+		<Order Time="150s" Account="PRODUCTION" Deposit="2000"/>
+		<Order Time="170s" Account="PRODUCTION" Deposit="2000"/>
+		<Order Time="190s" />
+		<Order Build="AlliedWarFactory" />
+		<Order Time="220s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+        id="FixAlliedStandard"
+        Side="PlayerTemplate:Allies">
+		<Order Build="AlliedBarracks" />
+		<Order Time="10s" Account="PRODUCTION" Deposit="2000" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedWarFactory" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<!--
+    <Order Time="90s" />
+    -->
+		<Order Build="AlliedAntiInfantryVehicle_Ground" />
+		<Order Build="AlliedAntiInfantryVehicle_Ground" />
+		<Order Build="AlliedAntiInfantryVehicle_Ground" />
+		<Order Time="120s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+	    id="FixAlliedStandard_BRUTAL"
+	    Side="PlayerTemplate:Allies">
+		<Order Build="AlliedBarracks" />
+		<Order Time="10s" Account="PRODUCTION" Deposit="4000" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedWarFactory" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<!--
+    <Order Time="90s" />
+    -->
+		<Order Build="AlliedAntiInfantryVehicle_Ground" />
+		<Order Build="AlliedAntiInfantryVehicle_Ground" />
+		<Order Build="AlliedAntiInfantryVehicle_Ground" />
+		<Order Time="120s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+        id="FixAlliedIFVRush"
+        Side="PlayerTemplate:Allies">
+		<Order Build="AlliedBarracks" />
+
+		<Order Build="AlliedAntiInfantryInfantry" />
+		<Order Build="AlliedAntiVehicleInfantry" />
+		<Order Build="AlliedAntiInfantryInfantry" />
+		<Order Build="AlliedAntiVehicleInfantry" />
+		<Order Build="AlliedAntiInfantryInfantry" />
+		<Order Build="AlliedAntiVehicleInfantry" />
+		<Order Build="AlliedAntiInfantryInfantry" />
+		<Order Build="AlliedAntiVehicleInfantry" />
+
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedWarFactory" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<!--
+    <Order Time="90s" />
+    -->
+		<Order Build="AlliedAntiAirVehicleTech1" />
+		<Order Build="AlliedAntiAirVehicleTech1" />
+		<Order Build="AlliedAntiAirVehicleTech1" />
+		<Order Build="AlliedAntiAirVehicleTech1" />
+		<Order Build="AlliedAntiAirVehicleTech1" />
+		<Order Time="90s" Account="PRODUCTION" Deposit="2000" />
+		<Order Time="140s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+        id="FixAlliedIsland"
+        Side="PlayerTemplate:Allies">
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedRefinery" />
+		<Order Build="AlliedPowerPlant" />
+		<Order Build="AlliedNavalYard" />
+		<Order Build="Upgrade_AlliedAirUnitFix" />
+		<!--
+    <Order Time="80s" />
+    -->
+		<Order Build="AlliedAntiInfantryVehicle" />
+		<Order Build="AlliedAntiInfantryVehicle" />
+		<Order Build="AlliedAntiInfantryVehicle" />
+		<Order Time="110s" />
+		<Order Build="AlliedBarracks" />
+		<Order Time="120s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+        id="FixJapanIsland"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanNavalYardEgg" />	
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanNavyScoutShip" />
+		<Order Build="JapanNavyScoutShip" />
+		<Order Build="JapanNavyScoutShip" />
+		<Order Build="Upgrade_JapanNavalYardTech2" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="500" />
+		<Order Time="140s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+	    id="FixJapanIsland_BRUTAL"
+	    Side="PlayerTemplate:Japan">
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanNavalYardEgg" />	
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanAntiInfantryInfantry" />
+		<Order Build="JapanArcherInfantry" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Build="JapanNavyScoutShip" />
+		<Order Build="JapanNavyScoutShip" />
+		<Order Build="JapanNavyScoutShip" />
+		<Order Build="Upgrade_JapanNavalYardTech2" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="1000" />
+		<Order Time="95s" Account="PRODUCTION" Deposit="1000" />
+		<Order Time="140s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+        id="FixJapanMechRush"
+        Side="PlayerTemplate:Japan">
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="80s" Account="PRODUCTION" Deposit="700" />
+		<Order Build="Upgrade_JapanWarFactoryTech2" />
+		<Order Build="JapanAntiAirVehicleTech1" />
+		<Order Build="JapanAntiAirVehicleTech1" />
+		<Order Time="160s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+	    id="FixJapanMechRush_BRUTAL"
+	    Side="PlayerTemplate:Japan">
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanBarracksEgg" />
+		<Order Build="Upgrade_JapanInfUnitFix" />
+		<Order Build="JapanPowerPlantEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanRefineryEgg" />
+		<Order Build="JapanWarFactoryEgg" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Build="JapanAntiInfantryVehicle" />
+		<Order Time="65s" Account="PRODUCTION" Deposit="1600" />
+		<Order Build="JapanBaseDefenseEgg" />
+		<Order Build="Upgrade_JapanWarFactoryTech2" />
+		<Order Time="85s" Account="PRODUCTION" Deposit="1000" />
+		<Order Time="105s" Account="PRODUCTION" Deposit="1000" />
+		<Order Time="125s" Account="PRODUCTION" Deposit="1000" />
+		<Order Time="150s" Account="PRODUCTION" Deposit="1000" />
+		<Order Build="JapanAntiAirVehicleTech1" />
+		<Order Build="JapanAntiAirVehicleTech1" />
+		<Order Time="160s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+        id="FixSovietAirfield"
+        Side="PlayerTemplate:Soviet">
+		<Order Build="SovietBarracks" />
+		<Order Time="10s" Account="PRODUCTION" Deposit="2000" />
+		<Order Build="SovietPowerPlant" />
+		<Order Build="SovietRefinery" />
+		<Order Build="SovietRefinery" />
+		<Order Build="SovietPowerPlantAdvanced" />
+		<Order Build="SovietAirfield" />
+		<Order Build="SovietAntiGroundAircraft" />
+		<Order Build="SovietAntiGroundAircraft" />
+
+        <Order Time="120s" />
+	    <Order Build="SovietWarFactory" />	
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+	    id="FixSovietAirfield_BRUTAL"
+	    Side="PlayerTemplate:Soviet">
+		<Order Build="SovietBarracks" />
+		<Order Time="10s" Account="PRODUCTION" Deposit="4000" />
+		<Order Build="SovietPowerPlant" />
+		<Order Build="SovietRefinery" />
+		<Order Build="SovietRefinery" />
+		<Order Build="SovietPowerPlantAdvanced" />
+		<Order Build="SovietAirfield" />
+		<Order Build="SovietAntiGroundAircraft" />
+		<Order Build="SovietAntiGroundAircraft" />
+
+        <Order Time="120s" />
+	    <Order Build="SovietWarFactory" />
+		<Order Time="150s" />
+	</SkirmishOpeningMove>
+
+</AssetDeclaration>

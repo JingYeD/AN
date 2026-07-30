@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="AI Personal/index.xml" />
+		<Include type="all" source="Fix States/index.xml" />
+		<Include type="all" source="Personality/index.xml" />	
+      </Includes>
+</AssetDeclaration>
