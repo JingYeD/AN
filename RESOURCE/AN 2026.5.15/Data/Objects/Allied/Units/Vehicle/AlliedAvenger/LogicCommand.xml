@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<LogicCommandSet
+		id="AlliedAntiAirVehicleTech2CommandSet">
+		<Cmd>Command_AttackMove</Cmd>
+		<Cmd>Command_ToggleRadarLockSpecialPower</Cmd>
+		<Cmd>Command_MoveToPositionAndCollect</Cmd>
+	</LogicCommandSet>
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructAlliedAntiAirVehicleTech2">
+		<Object>AlliedAntiAirVehicleTech2</Object>
+	</LogicCommand>
+
+</AssetDeclaration>

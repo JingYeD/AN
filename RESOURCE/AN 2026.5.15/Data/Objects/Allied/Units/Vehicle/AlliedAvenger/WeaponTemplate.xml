@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
+	</Includes>
+	<WeaponTemplate
+		id="ScatterableWeapon">
+		<ScatterRadiusVsType
+			Radius="70.0"
+			RequiredModelConditions="SHRINK_EFFECT">
+			<Filter
+				Rule="ANY"
+				Include="INFANTRY AIRCRAFT VEHICLE HUGE_VEHICLE" />
+		</ScatterRadiusVsType>
+		<ScatterRadiusVsType
+			Radius="70.0"
+			RequiredModelConditions="SPECIAL_POWER_2">
+			<Filter
+				Rule="NONE">
+				<IncludeThing>JapanAntiVehicleVehicleTech1</IncludeThing>
+			</Filter>
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileGroundLauncher"
+		inheritFrom="ScatterableWeapon"
+		AttackRange="200.0"
+		WeaponSpeed="500"
+		MinWeaponSpeed="500"
+		MaxWeaponSpeed="510"
+		FireFX="FX_AlliedIFVMissileFire"
+		FireVeteranFX="FX_AlliedIFVMissileFire_Vet"
+		FireSound="ALL_JavelinSoldier_MissileFire"
+		AcceptableAimDelta="20d"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PRE_FIRE"
+		ClipSize="8"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
+		CanFireWhileMoving="true">
+		<FiringDuration
+			MinSeconds=".25s"
+			MaxSeconds=".25s" />
+		<ClipReloadTime
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlliedAntiAirMissileProjectile"
+				WarheadTemplate="AlliedAntiAirVehicleTech2MissileLauncherGroundWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlliedAntiAirMissileProjectile_Veteran"/>
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="10"
+				DurationSeconds="1.0s"/>
+			<InformTargetNugget
+					 MaxTimeToImpactFudgeFactor="1.6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileLauncherGroundWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER" >
+		<Nuggets>
+			<DamageNugget
+				Damage="25.0"
+				Radius="5.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="ALLIED_SAM"
+				DeathType="EXPLODED" />
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="2"
+				DurationSeconds="3s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileLauncher"
+		inheritFrom="ScatterableWeapon"
+		AttackRange="300.0"
+		WeaponSpeed="500"
+		MinWeaponSpeed="500"
+		MaxWeaponSpeed="510"
+		FireFX="FX_AlliedIFVMissileFire"
+		FireVeteranFX="FX_AlliedIFVMissileFire_Vet"
+		FireSound="ALL_JavelinSoldier_MissileFire"
+		AcceptableAimDelta="90d"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PRE_FIRE"
+		ClipSize="8"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		RequiredAntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true">
+		<FiringDuration
+			MinSeconds=".25s"
+			MaxSeconds=".25s" />
+		<ClipReloadTime
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlliedAntiAirMissileProjectile"
+				WarheadTemplate="AlliedAntiAirVehicleTech2MissileLauncherWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlliedAntiAirMissileProjectile_Veteran"/>
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="10"
+				DurationSeconds="1.0s"/>
+			<InformTargetNugget
+					 MaxTimeToImpactFudgeFactor="1.6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileLauncherWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY" >
+		<Nuggets>
+			<DamageNugget
+				Damage="40.0"
+				Radius="10.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="ALLIED_SAM"
+				DeathType="EXPLODED" />
+			<SuppressionNugget
+					Radius="20.0"
+					Suppression="2"
+					DurationSeconds="3s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileLauncher_RadarLock"
+		AttackRange="250.0"
+		MinimumAttackRange="50"
+		WeaponSpeed="300"
+        MinWeaponSpeed="150"
+		FireFX="FX_AlliedIFVMissileFire"
+		FireVeteranFX="FX_AlliedIFVMissileFire_Vet"
+		FireSound="ALL_JavelinSoldier_MissileFire"
+		AcceptableAimDelta="5d"
+		PreAttackType="PER_TARGET"
+		ReAcquireDetailType="PER_ATTACK"
+		ClipSize="=$UNLIMITED_CLIP_SIZE"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT RELOAD_WHEN_ATTACK_STOPS"
+		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_STRUCTURE"
+		CanFireWhileMoving="false">
+		<!-- Pre Attack Delay is the lock on time -->
+		<PreAttackDelay
+		  MinSeconds="3.0s"
+		  MaxSeconds="3.0s" />
+		<FiringDuration
+			MinSeconds="0.15s"
+			MaxSeconds="0.25s" />
+		<WeaponAiHintInfo
+			UseLongLockOnTimeCode="true"
+      MaxSpeedOfTarget="65"/>
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.3s"
+				LaserId="1"/>
+			<ProjectileNugget
+				WarheadTemplate="AlliedAntiAirVehicleTech2MissileGroundWarhead_RadarLock"
+				ProjectileTemplate="AlliedDefaultMissileProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlliedDefaultMissileProjectile_Veteran"/>
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="10"
+				DurationSeconds="5s"/>
+			<InformTargetNugget
+					 MaxTimeToImpactFudgeFactor="1.6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileGroundWarhead_RadarLock"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+        Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE">
+		<Nuggets>
+			<DamageNugget
+					  Damage="25.0"
+					  Radius="5.0"
+					  DamageType="ROCKET"
+					  DamageFXType="ALLIED_MISSILE"
+					  DeathType="EXPLODED">
+			</DamageNugget>
+			<SuppressionNugget
+					Radius="20.0"
+					Suppression="2"
+					DurationSeconds="3s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileLauncherAir_RadarLock"
+		inheritFrom="AlliedAntiAirVehicleTech2MissileLauncher_RadarLock"
+		AttackRange="350.0"
+		MinimumAttackRange="0"
+		RequiredAntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="AlliedAntiAirVehicleTech2MissileWarhead_RadarLock"
+				ProjectileTemplate="AlliedDefaultMissileProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlliedDefaultMissileProjectile_Veteran"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiAirVehicleTech2MissileWarhead_RadarLock"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+        Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<Nuggets>
+			<DamageNugget
+					  Damage="40.0"
+					  Radius="5.0"
+					  DamageType="ROCKET"
+					  DamageFXType="ALLIED_MISSILE"
+					  DeathType="EXPLODED">
+			</DamageNugget>
+			<SuppressionNugget
+					Radius="20.0"
+					Suppression="2"
+					DurationSeconds="3s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+</AssetDeclaration>

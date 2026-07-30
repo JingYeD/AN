@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="instance" source="DATA:Items/Base/BaseExperienceLevelTemplate.xml" />
+	</Includes>
+
+	<ExperienceLevelTemplate
+		id="AlliedAntiAirVehicleTech1ExperienceLevel_1"
+		inheritFrom="ExperienceLevel_AlliedRank1"
+		RequiredExperience="1"
+		ExperienceAward="700">
+		<Target>AlliedAntiAirVehicleTech2</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlliedAntiAirVehicleTech1ExperienceLevel_2"
+		inheritFrom="ExperienceLevel_AlliedRank2"
+		Prerequisite="AlliedAntiAirVehicleTech1ExperienceLevel_1"
+		RequiredExperience="2100"
+		ExperienceAward="1400">
+		<Target>AlliedAntiAirVehicleTech2</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlliedAntiAirVehicleTech1ExperienceLevel_3"
+		inheritFrom="ExperienceLevel_AlliedRank3"
+		Prerequisite="AlliedAntiAirVehicleTech1ExperienceLevel_2"
+		RequiredExperience="4200"
+		ExperienceAward="2100">
+		<Target>AlliedAntiAirVehicleTech2</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlliedAntiAirVehicleTech1ExperienceLevel_4"
+		inheritFrom="ExperienceLevel_AlliedRank4"
+		Prerequisite="AlliedAntiAirVehicleTech1ExperienceLevel_3"
+		RequiredExperience="6300"
+		ExperienceAward="2800">
+		<Target>AlliedAntiAirVehicleTech2</Target>
+	</ExperienceLevelTemplate>
+</AssetDeclaration>

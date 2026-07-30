@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Includes>
+		<Include  type="instance"  source="DATA:BaseObjects/BaseProjectile.xml"/>
+	</Includes>
+
+	<GameObject
+		id="AlliedFutureTankNeutronScramblerNode"
+		Side="Allies"
+		EditorSorting="SYSTEM"
+		TransportSlotCount="0"
+		IsTrainable="false"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE NO_COLLIDE SIMPLE_OBJECT_PROP SKIRMISH_AI_ATTEMPT_TO_DODGE PASS_EXPERIENCE_TO_PRODUCER"
+		EditorName="AlliedFutureTankNeutronScramblerNode">
+		<DisplayName>AlliedFutureTankNeutronScramblerNode</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+                <SkirmishAIInformation
+                        DodgeSafetyDistance="150.0">
+                        <DodgeWithUnits 
+                                 Rule="ANY"
+                                 Relationship="ENEMIES"
+                                 StatusBitFlagsExclude="AIRBORNE_TARGET">
+                        </DodgeWithUnits>
+                </SkirmishAIInformation>
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				NoRotate="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+                                                Name="" />
+                                        <ParticleSysBone
+                                                BoneName="NONE"
+                                                FXParticleSystemTemplate="AlliedFutureTankHit_XP"
+                                                FollowBone="true"/>
+                                        <ParticleSysBone
+                                                BoneName="NONE"
+                                                FXParticleSystemTemplate="AlliedFutureTankHit_Light"
+                                                FollowBone="true"/>
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="0.9s"
+				MaxLifetime="0.9s" />
+		
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="1.0">
+			</Shape>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="ALL_FutureTank_Weapon_NeutronScramblerImpactSmall" AudioType="soundAmbient"/>
+		</AudioArraySound>
+		<ShadowInfo
+			Type="NONE" />
+		<CrusherInfo
+			id="id_CrusherInfo"
+			CrushableLevel="0" />
+	</GameObject>
+
+	<GameObject
+		id="AlliedFutureTankNeutronScramblerNode_Vet"
+		inheritFrom="AlliedFutureTankNeutronScramblerNode">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				NoRotate="true"
+				xai:joinAction="Replace">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+                                                Name="" />
+					<ParticleSysBone
+                                                BoneName="NONE"
+                                                FXParticleSystemTemplate="AlliedFutureTankHit_XPVet"
+                                                FollowBone="true"/>
+					<ParticleSysBone
+                                                BoneName="NONE"
+                                                FXParticleSystemTemplate="AlliedFutureTankHit_LightVet"
+                                                FollowBone="true"/>
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+	</GameObject>
+	
+	<GameObject
+		id="AlliedFutureTankNeutronWeaponProjectile"
+		inheritFrom="BaseProjectile"
+		KindOf="-NO_COLLIDE"
+		Side="Allies"
+		EditorName="AlliedFutureTankNeutronWeaponProjectile">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+                                <ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+                                        <Model
+						Name="FXFutureProjectile02" />
+                                        <ParticleSysBone
+                                                BoneName="NONE"
+                                                FXParticleSystemTemplate="AlliedFutureTankProjLight"
+                                                FollowBone="true"/>
+                                </ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_Allied_FutureTank_Hit" />
+			</FXListBehavior>
+
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL"
+				FirstHeightMin="5"
+				FirstHeightMax="5"
+				SecondHeightMin="0"
+				SecondHeightMax="0"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				CurveFlattenMinDist="300"
+				FlightPathAdjustDistPerSecond="20"
+				GroundHitFX="FX_Allied_FutureTank_Hit"
+                                Acceleration="5" />
+
+		</Behaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="0.8">
+                        </Shape>
+		</Geometry>
+	</GameObject>
+
+	<!-- VETERAN -->
+	<GameObject
+		id="AlliedFutureTankNeutronWeaponProjectile_Vet"
+		inheritFrom="AlliedFutureTankNeutronWeaponProjectile"
+		EditorName="AlliedFutureTankNeutronWeaponProjectile_Vet">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+				xai:joinAction="Replace">
+                                <ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+                                        <Model
+						Name="FXFutureProjectile02_Vet" />
+                                        <ParticleSysBone
+                                                BoneName="NONE"
+                                                FXParticleSystemTemplate="AlliedFutureTankProjLight"
+                                                FollowBone="true"/>
+                                </ModelConditionState>
+                        </ScriptedModelDraw>
+                </Draws>
+                <Behaviors>
+                        <FXListBehavior
+				id="ModuleTag_FXList">
+                                <DieMuxData
+					DeathTypes="ALL" />
+                                <Event
+					Index="onDeath"
+                                        xai:joinAction="Replace"
+					FX="FX_Allied_FutureTank_HitVet" />
+			</FXListBehavior>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+                                xai:joinAction="Replace"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL"
+				FirstHeightMin="5"
+				FirstHeightMax="5"
+				SecondHeightMin="0"
+				SecondHeightMax="0"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				CurveFlattenMinDist="300"
+				FlightPathAdjustDistPerSecond="20"
+				GroundHitFX="FX_Allied_FutureTank_HitVet"
+                                Acceleration="5" />
+		</Behaviors>
+	</GameObject>
+
+
+	<GameObject
+		id="FutureTankDummyObject"
+		Side="Allied"
+		EditorSorting="SYSTEM"
+		IsTrainable="false"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE NO_COLLIDE PASS_EXPERIENCE_TO_PRODUCER"
+		EditorName="FutureTankDummyObject">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="2.0s"
+				MaxLifetime="2.0s" />
+			
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate0">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon0"
+					FireDelay="0.05s">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate1">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon1"
+					FireDelay="0.65s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+			
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate2">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon2"
+					FireDelay="0.75s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>			
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate3">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon3"
+					FireDelay="0.85s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate4">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon4"
+					FireDelay="0.95s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate5">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon5"
+					FireDelay="1.05s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate6">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon6"
+					FireDelay="1.15s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate7">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon7"
+					FireDelay="1.25s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate8">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon8"
+					FireDelay="1.35s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate9">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon9"
+					FireDelay="1.45s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate10">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon10"
+					FireDelay="1.55s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate11">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon11"
+					FireDelay="1.65s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate12">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon12"
+					FireDelay="1.75s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate13">
+				<FireWeaponNugget
+					WeaponName="FutureTankIncrementalWeapon13"
+					FireDelay="1.85s"
+          OneShot="true">
+				</FireWeaponNugget>
+			</FireWeaponUpdate>
+
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+
+		</Behaviors>
+		<Body>
+			<PropBody
+				id="ModuleTag_Body"/>
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="1.0">
+			</Shape>
+		</Geometry>
+		<ShadowInfo
+			Type="NONE" />
+		<CrusherInfo
+			id="id_CrusherInfo"
+			CrushableLevel="0" />
+	</GameObject>
+
+</AssetDeclaration>

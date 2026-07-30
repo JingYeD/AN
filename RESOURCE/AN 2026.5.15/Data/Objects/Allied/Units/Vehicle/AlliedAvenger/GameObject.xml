@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Tags></Tags>
+	<Includes>
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
+		<Include
+			type="all"
+			source="ART:AUIFV_SKN.w3x" />
+		<Include
+			type="instance"
+      source="ART:EXTnkTrack.xml" />
+		<Include
+				type="instance"
+				source="ART:EXTireTrack2.xml" />
+		<Include
+				type="instance"
+				source="ART:EX_Headlights.w3x" />
+		<Include
+			type="all"
+			source="ART:AUIFV_D.xml" />
+
+		<!-- FX Includes -->
+		<Include type="all"	source="ART:FXJapanTracer.xml" />
+
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:Objects/BaseObjects/BaseVehicle.xml" />
+		<Include
+			type="instance"
+	        source="DATA:BaseObjects/BaseCollapsingObject.xml" />
+	</Includes>
+
+	<GameObject
+		id="AlliedAntiAirVehicleTech2"
+		inheritFrom="BaseVehicle_New"
+		SelectPortrait="Portrait_AlliedAvenger"
+		ButtonImage="Button_AlliedAvenger"
+		Side="Allies"
+		SubGroupPriority="705"
+		EditorSorting="UNIT"
+		HealthBoxHeightOffset="25"
+		BuildTime="10"
+		CommandSet="AlliedAntiAirVehicleTech2CommandSet"
+		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS SCORE VEHICLE CAN_BE_FAVORITE_UNIT"
+		WeaponCategory="MISSILE"
+		VoicePriority="188"
+		EditorName="AlliedAntiAirVehicleTech2"
+		Description="Desc:AlliedAntiAirVehicleTech2"
+		TypeDescription="Type:AlliedAntiAirVehicleTech2">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlliedAntiAirVehicleTech2</DisplayName>
+		<ObjectResourceInfo>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="1200"/>
+		</ObjectResourceInfo>
+		<GameDependency>
+			<NeededUpgrade>Upgrade_AlliedTech2</NeededUpgrade>
+		</GameDependency>
+		<ArmorSet
+			Armor="AlliedAntiAirVehicleTech1Armor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="TestReactiveLocomotorWHEELS"
+			Condition="NORMAL"
+			Speed="100.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true"/>
+		<Draws>
+			<TruckDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="0.1"
+				MaxRecoilDistance="0.1"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0"
+				ExtraPublicBone="BONE_TIRE_FRONT_LEFT_01 BONE_TIRE_FRONT_RIGHT_01 BONE_TIRE_BACK_LEFT_01 BONE_TIRE_BACK_RIGHT_01 FXHEADLIGHT_L FXHEADLIGHT_R"
+				TrackMarks="EXTireTrack2"
+				
+				LeftFrontTireBone="BONE_TIRE_FRONT_LEFT_01"
+				RightFrontTireBone="BONE_TIRE_FRONT_RIGHT_01"
+				LeftRearTireBone="BONE_TIRE_BACK_LEFT_01"
+				RightRearTireBone="BONE_TIRE_BACK_RIGHT_01"
+				
+				TrackMarksLeftBone="BONE_TIRE_BACK_LEFT_01"
+				TrackMarksRightBone="BONE_TIRE_BACK_RIGHT_01">
+
+				<TreadTerrainParticles>DefaultTankTerrainParticleMapping</TreadTerrainParticles>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="true">
+					<Model
+						Name="AUANTIAIRVEHICLETECH2" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_MISSILES_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_MISSILES_" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FX_MISSILES_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FX_MISSILES_" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="FX_LASER" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="FX_MISSILES_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="FX_MISSILES_" />
+					<WeaponFireFXBone
+					    WeaponSlotID="1"
+					    WeaponSlotType="QUATERNARY_WEAPON"
+					    BoneName="FX_LASER" />
+					<WeaponFireFXBone
+					    WeaponSlotID="1"
+					    WeaponSlotType="QUATERNARY_WEAPON"
+					    BoneName="FX_MISSILES_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="QUATERNARY_WEAPON"
+						BoneName="FX_MISSILES_" />
+					<Turret
+						TurretNameKey="BONE_TURRET"
+						TurretPitch="TURRET_PITCH"
+						TurretID="1" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="AUANTIAIRVEHICLETECH2" />
+					<ParticleSysBone
+						BoneName="FX_DAMAGE01"
+						FXParticleSystemTemplate="VehicleDamageSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="AUANTIAIRVEHICLETECH2" />
+					<Texture
+						Original="AUAntiStructureVehicle"
+						New="AUAntiStructureVehicle_D" />
+					<ParticleSysBone
+						BoneName="FX_DAMAGE01"
+						FXParticleSystemTemplate="VehicleDamageSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_DAMAGE01"
+						FXParticleSystemTemplate="VehicleDamageFire"
+						FollowBone="true" />
+				</ModelConditionState>
+
+			</TruckDraw>
+
+
+			<!-- include Headlight draw module. -->
+			<xi:include
+					  href="DATA:Includes/HeadlightDraw2.xml"
+					  xpointer="xmlns(n=uri:ea.com:eala:asset) xpointer(/n:HeadlightDraw2/child::*)" />
+
+
+			<LaserDraw
+				id="ModuleTag_LaserDraw"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".03"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="5"
+				WeaponSlotID="1"
+				LaserStateID="1">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaser</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+						<Float Name="ColorEmissive">
+							<Value>5.000000</Value>
+							<Value>1.000000</Value>
+							<Value>1.000000</Value>
+						</Float>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+
+		</Draws>
+		<Behaviors>
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AutoChooseWeapon="true">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedAntiAirVehicleTech2MissileGroundLauncher"
+                        ForbiddenObjectStatus="GENERIC_TOGGLE_STATE"/>
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						Template="AlliedAntiAirVehicleTech2MissileLauncher"
+                        ForbiddenObjectStatus="GENERIC_TOGGLE_STATE"/>
+					<Weapon
+						Ordering="TERTIARY_WEAPON"
+						Template="AlliedAntiAirVehicleTech2MissileLauncher_RadarLock"
+                        ObjectStatus="GENERIC_TOGGLE_STATE"/>
+					<Weapon
+						Ordering="QUATERNARY_WEAPON"
+						Template="AlliedAntiAirVehicleTech2MissileLauncherAir_RadarLock"
+                        ObjectStatus="GENERIC_TOGGLE_STATE"/>
+					<TurretSettings
+						TurretTurnRate="360"
+						MinimumPitch="-30d"
+						AllowsPitch="true"
+						TurretPitchRate="180"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="4.0s"
+						MinIdleScanAngle="30.0"
+						MaxIdleScanAngle="50.0"
+						ComeToHaltJiggle="3d">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true">
+						</TurretAITargetChooserData>
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+
+			<AimWeapon
+				id="ModuleTag_AimWeapon" />
+
+			<LaserState
+					  id="ModuleTag_LaserState"
+					  LaserId="1"
+			          OriginBoneName="FX_Laser" >
+				<LaserEndParticleSystem>Allied_Target_LaserEnd</LaserEndParticleSystem>
+			</LaserState>
+
+			<Physics
+				id="ModuleTag_Physics" />
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AUAntiAirVehicleTech2_Die_OCL">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+			</CreateObjectDie>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_AlliedChieftanDie" />
+			</FXListBehavior>
+
+			<SpecialPower
+				id="ModuleTag_RadarLock"
+				SpecialPowerTemplate="SpecialPower_RadarLock"
+				UpdateModuleStartsAttack="true"
+				SetModelCondition="USER_7"
+				SetModelConditionTime="4.3s"/>
+			<ToggleStatusSpecialAbilityUpdate
+				id="ModuleTag_ToggleRadarLock"
+				Options="RECONSTITUTE_STORED_COMMAND"
+				SpecialPowerTemplate="SpecialPower_RadarLock">
+				<ToggleState
+					GenericLuaEventParameter="laser_off">
+					<SkirmishAiInfo
+						ToggleHint="TOGGLE_DEFAULT">
+						<StateWeapon
+							Weapon="AlliedAntiAirVehicleTech2MissileGroundLauncher" />
+					</SkirmishAiInfo>
+				</ToggleState>
+				<!-- NOTE: Use the ModelConditions attibute in the following Toggle state to put some animation on the Infantry during Radar Lock -->
+				<ToggleState
+					ObjectStatus="GENERIC_TOGGLE_STATE"
+					ModelConditions="USER_6"
+					AttributeModifier="AttributeModifier_RadarLockVisionBonus"
+					GenericLuaEventParameter="laser_on"
+					EnterStateSound="ALL_JavelinSoldier_LaserGuideOnMS">
+					<SkirmishAiInfo
+						ToggleHint="TOGGLE_WEAPON"
+            OnlyUseWhenHaveTarget="true">
+						<StateWeapon
+							Weapon="AlliedAntiAirVehicleTech2MissileLauncher_RadarLock" />
+					</SkirmishAiInfo>
+				</ToggleState>
+
+			</ToggleStatusSpecialAbilityUpdate>
+
+			<LUAEventList
+				id="ModuleTag_LUAEventList"
+				EventListName="AlliedAntiVehicleInfantryFunctions" />
+
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StateMachine="UnitAIStateMachine">
+				<UnitAITargetChooserData
+							IdleScanDelay="=$FAST_IDLE_SCAN_DELAY" >
+					<ObjectVisionRange
+						id="ObjectVisionRange_Aircraft"
+						Range="150">
+						<Filter
+							Rule="ANY"
+							Include="INFANTRY VEHICLE AIRCRAFT"
+							StatusBitFlags="AIRBORNE_TARGET"/>
+					</ObjectVisionRange>
+				</UnitAITargetChooserData>
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="480" />
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_ShrunkenVoice">
+				<ModelConditionSound Sound="ALL_MultigunnerIFV_VoiceShrunken" RequiredFlags="SHRINK_EFFECT" />
+			</ModelConditionAudioLoopClientBehavior>
+			<UpgradeSoundSelectorClientBehavior id="VoiceMoveRepair">
+				<Override>
+					<AudioArrayVoice>
+						<AudioEntry Sound="ALL_IFV_VoiceMoveRepair" AudioType="voiceMove" />
+						<AudioEntry Sound="ALL_IFV_VoiceMoveRepair" AudioType="voiceAttack" />
+						<AudioEntry Sound="ALL_IFV_VoiceMoveRepair" AudioType="voiceAttackAfterMoving" />
+					</AudioArrayVoice>
+					<RequiredUpgrade>Uprade_IFV_Repair</RequiredUpgrade>
+				</Override>
+			</UpgradeSoundSelectorClientBehavior>
+			<ModelConditionSoundSelectorClientBehavior id="ModuleTag_LaserGuidedVoice">
+				<Override RequiredFlags="USER_6">
+					<AudioArrayVoice>
+						<AudioEntry Sound="ALL_Javelin_VoiceAttackLaserGuided" AudioType="voiceAttack" />
+					</AudioArrayVoice>
+				</Override>
+			</ModelConditionSoundSelectorClientBehavior>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_LaserGuideOff">
+				<ModelConditionSound Sound="ALL_JavelinSoldier_LaserGuideOffMS" RequiredFlags="USER_7" ExcludedFlags="USER_6 DYING" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="14.0"
+				MinorRadius="14.0"
+				Height="16.0"
+				ContactPointGeneration="VEHICLE">
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="ALL_IFV_VoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="ALL_IFV_VoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="ALL_IFV_VoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="ALL_IFV_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="ALL_IFV_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="ALL_MultiGunnerIFV_VoiceSelectMS" AudioType="voiceSelect" />
+			<AudioEntry Sound="ALL_IFV_VoiceSelectBattleMS" AudioType="voiceSelectBattle" />
+			<AudioEntry Sound="ALL_IFV_VoiceSelectUnderFireMS" AudioType="voiceSelectUnderFire" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="ALL_MultiGunnerIFV_MovStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="VehicleCrush"
+				AudioType="soundCrushing" />
+		</AudioArraySound>
+		<VisionInfo
+			VisionRange="200"
+			ShroudClearingRange="=$STANDARD_SHROUD_CLEAR" />
+		<CrusherInfo
+			id="id_CrusherInfo"
+			CrushEqualLevelProps="true"
+			CrusherLevel="0"
+			CrushableLevel="20" />
+	</GameObject>
+
+	<GameObject
+		id="AlliedAntiAirVehicleTech2_Collapse"
+		inheritFrom="BaseCollapsingObject"
+		EditorName="AlliedAntiAirVehicleTech2_Collapse">
+		<Draws>
+			<DynamicsDraw
+			id="ModuleTag_Draw"
+			Collision="NONINTERCOLLIDING"
+			FlingPerturbation="9"
+			Explodiness="4">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="AUANTIAIRVEHICLETECH2_COL" />
+					<ParticleSysBone
+		              BoneName="Bone_D_01"
+		              FXParticleSystemTemplate="VehicleDamageFire"
+		              FollowBone="true"
+		              OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_01"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisFireLight"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_01"
+					  FXParticleSystemTemplate="VehicleDamageSmoke"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_01"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisBubbles"
+					  FollowBone="true"
+					  OnlyIfOnWater="true"/>
+
+					<ParticleSysBone
+					  BoneName="Bone_D_02"
+					  FXParticleSystemTemplate="VehicleDamageFire"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_02"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisFireLight"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_02"
+					  FXParticleSystemTemplate="VehicleDamageSmoke"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_02"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisBubbles"
+					  FollowBone="true"
+					  OnlyIfOnWater="true"/>
+
+					<ParticleSysBone
+					  BoneName="Bone_D_03"
+					  FXParticleSystemTemplate="VehicleDamageFire"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_03"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisFireLight"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_03"
+					  FXParticleSystemTemplate="VehicleDamageSmoke"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_03"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisBubbles"
+					  FollowBone="true"
+					  OnlyIfOnWater="true"/>
+
+					<ParticleSysBone
+					  BoneName="Bone_D_05"
+					  FXParticleSystemTemplate="VehicleDamageFire"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_05"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisFireLight"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_05"
+					  FXParticleSystemTemplate="VehicleDamageSmoke"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_05"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisBubbles"
+					  FollowBone="true"
+					  OnlyIfOnWater="true"/>
+
+					<ParticleSysBone
+					  BoneName="Bone_D_06"
+					  FXParticleSystemTemplate="VehicleDamageFire"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_06"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisFireLight"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_06"
+					  FXParticleSystemTemplate="VehicleDamageSmoke"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_06"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisBubbles"
+					  FollowBone="true"
+					  OnlyIfOnWater="true"/>
+
+					<ParticleSysBone
+					  BoneName="Bone_D_07"
+					  FXParticleSystemTemplate="VehicleDamageFire"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_07"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisFireLight"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_07"
+					  FXParticleSystemTemplate="VehicleDamageSmoke"
+					  FollowBone="true"
+					  OnlyIfOnLand="true"/>
+					<ParticleSysBone
+					  BoneName="Bone_D_07"
+					  FXParticleSystemTemplate="AlliedCarrierDestructionDebrisBubbles"
+					  FollowBone="true"
+					  OnlyIfOnWater="true"/>
+				</ModelConditionState>
+				<BoneVolumes>
+					<BoneVolume BoneName="Bone_D_01" Mass="8831" Spinniness="3.0" ContactTag="DEBRIS" >
+						<Box HalfSizeX="17.6477" HalfSizeY="8.7638" HalfSizeZ="5.64005" >
+							<Translation x="-1.05809" y="0.0" z="8.95458" />
+							<Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+						</Box>
+					</BoneVolume>
+					<BoneVolume BoneName="Bone_D_02" Mass="192" Spinniness="3.0" ContactTag="DEBRIS" >
+						<Box HalfSizeX="3.54484" HalfSizeY="1.59069" HalfSizeZ="3.37646" >
+							<Translation x="10.5728" y="8.56872" z="3.37646" />
+							<Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+						</Box>
+					</BoneVolume>
+					<BoneVolume BoneName="Bone_D_03" Mass="192" Spinniness="3.0" ContactTag="DEBRIS" >
+						<Box HalfSizeX="3.54484" HalfSizeY="1.59069" HalfSizeZ="3.37646" >
+							<Translation x="-13.0431" y="8.56872" z="3.37646" />
+							<Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+						</Box>
+					</BoneVolume>
+					<BoneVolume BoneName="Bone_D_04" Mass="18" Spinniness="3.0" ContactTag="DEBRIS" >
+						<Box HalfSizeX="0.802956" HalfSizeY="1.24904" HalfSizeZ="1.85231" >
+							<Translation x="4.32071" y="-10.291" z="13.276" />
+							<Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+						</Box>
+					</BoneVolume>
+					<BoneVolume BoneName="Bone_D_05" Mass="404" Spinniness="3.0" ContactTag="DEBRIS" >
+						<Box HalfSizeX="3.33673" HalfSizeY="1.87356" HalfSizeZ="6.39268" >
+							<Translation x="-9.82022" y="0.0" z="17.9673" />
+							<Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+						</Box>
+					</BoneVolume>
+					<BoneVolume BoneName="Bone_D_06" Mass="543" Spinniness="3.0" ContactTag="DEBRIS" >
+						<Box HalfSizeX="7.53033" HalfSizeY="2.66939" HalfSizeZ="2.6695" >
+							<Translation x="-9.8424" y="5.11624" z="19.5064" />
+							<Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+						</Box>
+					</BoneVolume>
+					<BoneVolume BoneName="Bone_D_07" Mass="543" Spinniness="3.0" ContactTag="DEBRIS" >
+						<Box HalfSizeX="7.53033" HalfSizeY="2.66939" HalfSizeZ="2.6695" >
+							<Translation x="-9.8424" y="-5.116" z="19.5064" />
+							<Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+						</Box>
+					</BoneVolume>
+
+				</BoneVolumes>
+				<Lifetime
+					Delay="5s"
+					FadeTime="4s" />
+			</DynamicsDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifeTime"
+				MinLifetime="4s"
+				MaxLifetime="5s" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="1s"
+				SinkRate="1.5"
+				DestructionDelay="8s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+		</Behaviors>
+	</GameObject>
+</AssetDeclaration>
