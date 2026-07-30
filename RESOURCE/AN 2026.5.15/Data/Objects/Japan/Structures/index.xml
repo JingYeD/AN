@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="JapanBarracks.xml" />
+		<Include type="all" source="JapanBaseDefense.xml" />
+		<Include type="all" source="JapanBaseDefenseAdvanced.xml" />
+		<Include type="all" source="JapanNavalYard.xml" />
+		<Include type="all" source="JapanRefinery.xml" />
+		<Include type="all" source="JapanWarFactory.xml" />
+      </Includes>
+</AssetDeclaration>

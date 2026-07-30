@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+		<Include
+			type="all"
+			source="ART:JUAntiAirVehicleTech1_Rocket.w3x" />
+		<Include 
+			type="all" 
+			source="ART:Units/Naginata Cruiser/JapanAntiGroundAircraft_ROCKET.w3x"/>
+	</Includes>
+	<GameObject
+		id="JapanAntiAirVehicleTech1MissileProjectile"
+		Side="Japan"
+		EditorSorting="SYSTEM"
+		KindOf="PROJECTILE SMALL_MISSILE DEFLECT_BY_SPECIAL_POWER NO_COLLIDE HIDE_IF_FOGGED"
+		EditorName="JapanAntiAirVehicleTech1MissileProjectile">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+          <Model
+						Name="JUAntiAirVehicleTech1_Rocket" />
+          <ParticleSysBone
+             BoneName="NONE"
+             FXParticleSystemTemplate="FXJapanMIRVTrailShort"
+             FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHit" />
+			</FXListBehavior>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-5"
+				FirstHeightMax="5"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_ActiveBody"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="0.8"></Shape>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+	<GameObject
+		id="JapanAntiAirVehicleTech1MissileProjectile_AntiAir"
+		Side="Japan"
+		EditorSorting="SYSTEM"
+		KindOf="PROJECTILE SMALL_MISSILE DEFLECT_BY_SPECIAL_POWER NO_COLLIDE HIDE_IF_FOGGED"
+		EditorName="JapanAntiAirVehicleTech1MissileProjectile_AntiAir">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+								  Name="JUAntiAirVehicleTech1_Rocket" />
+					<ParticleSysBone
+					   BoneName="NONE"
+					   FXParticleSystemTemplate="FXJapanMIRVTrailShort"
+					   FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHit" />
+			</FXListBehavior>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="JapanLandMissileLauncher_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-5"
+				FirstHeightMax="5"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_ActiveBody"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="0.8"></Shape>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+	<GameObject
+		id="JapanAntiAirVehicleTech1MissileProjectile_AntiAir_New"
+		Side="Japan"
+		EditorSorting="SYSTEM"
+		KindOf="PROJECTILE SMALL_MISSILE DEFLECT_BY_SPECIAL_POWER NO_COLLIDE HIDE_IF_FOGGED"
+		EditorName="JapanAntiAirVehicleTech1MissileProjectile_AntiAir_New">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+								  Name="JUAntiAirVehicleTech1_Rocket" />
+					<ParticleSysBone
+					   BoneName="NONE"
+					   FXParticleSystemTemplate="FXJapanMIRVTrailShort"
+					   FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHit" />
+			</FXListBehavior>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="JapanBaseDefenseGunAir_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-5"
+				FirstHeightMax="5"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_ActiveBody"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="0.8"></Shape>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiAirVehicleTech1MissileProjectile"
+		id="JapanAntiAirVehicleTech1MissileProjectile_Veteran"
+		EditorName="JapanAntiAirVehicleTech1MissileProjectile_Veteran">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+				xai:joinAction="Replace">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="JUAntiAirVehicleTech1_Rocket" />
+          <ParticleSysBone
+             BoneName="NONE"
+             FXParticleSystemTemplate="FXJapanMIRVTrailShortVet"
+             FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHitVet" />
+			</FXListBehavior>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				xai:joinAction="Replace"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-50"
+				FirstHeightMax="50"
+				SecondHeightMin="-50"
+				SecondHeightMax="50"
+				FirstPercentIndent="100"
+				SecondPercentIndent="100"
+				GroundHitFX="FX_JAP_ChopperMissileHitVet"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHitVet"
+				SidewaysDrift="100"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiAirVehicleTech1MissileProjectile"
+		id="JapanAntiAirVehicleTech1MissileProjectile_Veteran_AntiAir"
+		EditorName="JapanAntiAirVehicleTech1MissileProjectile_Veteran_AntiAir">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+				xai:joinAction="Replace">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="JUAntiAirVehicleTech1_Rocket" />
+					<ParticleSysBone
+					   BoneName="NONE"
+					   FXParticleSystemTemplate="FXJapanMIRVTrailShortVet"
+					   FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHitVet" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="JapanLandMissileLauncher_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				xai:joinAction="Replace"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-50"
+				FirstHeightMax="50"
+				SecondHeightMin="-50"
+				SecondHeightMax="50"
+				FirstPercentIndent="100"
+				SecondPercentIndent="100"
+				GroundHitFX="FX_JAP_ChopperMissileHitVet"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHitVet"
+				SidewaysDrift="100"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiAirVehicleTech1MissileProjectile"
+		id="JapanAntiAirVehicleTech1MissileProjectile_Veteran_AntiAir_New"
+		EditorName="JapanAntiAirVehicleTech1MissileProjectile_Veteran_AntiAir_New">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+				xai:joinAction="Replace">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="JUAntiAirVehicleTech1_Rocket" />
+					<ParticleSysBone
+					   BoneName="NONE"
+					   FXParticleSystemTemplate="FXJapanMIRVTrailShortVet"
+					   FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHitVet" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="JapanBaseDefenseGunAir_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				xai:joinAction="Replace"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-50"
+				FirstHeightMax="50"
+				SecondHeightMin="-50"
+				SecondHeightMax="50"
+				FirstPercentIndent="100"
+				SecondPercentIndent="100"
+				GroundHitFX="FX_JAP_ChopperMissileHitVet"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHitVet"
+				SidewaysDrift="100"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+    <GameObject
+		inheritFrom="JapanAntiAirVehicleTech1MissileProjectile"
+		id="JapanAntiAirVehicleTech1MissileProjectile_JapanAdvancedMissilePacks"
+		EditorName="JapanAntiAirVehicleTech1MissileProjectile_JapanAdvancedMissilePacks">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+				xai:joinAction="Replace">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="JUAntiAirVehicleTech1_Rocket" />
+          <ParticleSysBone
+             BoneName="NONE"
+             FXParticleSystemTemplate="FXJapanMIRVTrailShortVet"
+             FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHitVet" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="JapanBaseDefenseGunAir_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-5"
+				FirstHeightMax="5"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		id="JapanAntiVehicleShipMissileProjectileBase"
+		Side="Japan"
+		EditorSorting="SYSTEM"
+		KindOf="PROJECTILE SMALL_MISSILE DEFLECT_BY_SPECIAL_POWER NO_COLLIDE HIDE_IF_FOGGED"
+		EditorName="JapanAntiVehicleShipMissileProjectileBase">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+								  Name="JapanAntiGroundAircraft_ROCKET" />
+					<ParticleSysBone
+					   BoneName="NONE"
+					   FXParticleSystemTemplate="FXJapanMIRVTrailShort"
+					   FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHit_New" />
+			</FXListBehavior>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="JapanLandMissileLauncher_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_ActiveBody"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="0.8"></Shape>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectileBase_Veteran">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+				xai:joinAction="Replace">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="JapanAntiGroundAircraft_ROCKET" />
+					<ParticleSysBone
+					   BoneName="NONE"
+					   FXParticleSystemTemplate="FXJapanMIRVTrailShortVet"
+					   FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JAP_ChopperMissileHitVet_New" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="JapanLandMissileLauncher_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</FireWeaponWhenDead>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectile30"		
+		EditorName="JapanAntiVehicleShipMissileProjectile30">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-35"
+				FirstHeightMax="-25"
+				SecondHeightMin="-35"
+				SecondHeightMax="-25"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		id="JapanAntiVehicleShipMissileProjectile30_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectile30_Veteran">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-35"
+				FirstHeightMax="-25"
+				SecondHeightMin="-35"
+				SecondHeightMax="-25"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectile50"
+		EditorName="JapanAntiVehicleShipMissileProjectile50">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-55"
+				FirstHeightMax="-45"
+				SecondHeightMin="-55"
+				SecondHeightMax="-45"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		id="JapanAntiVehicleShipMissileProjectile50_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectile50_Veteran">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-55"
+				FirstHeightMax="-45"
+				SecondHeightMin="-55"
+				SecondHeightMax="-45"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectile125"
+		EditorName="JapanAntiVehicleShipMissileProjectile125">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-130"
+				FirstHeightMax="-120"
+				SecondHeightMin="-130"
+				SecondHeightMax="-120"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		id="JapanAntiVehicleShipMissileProjectile125_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectile125_Veteran">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-130"
+				FirstHeightMax="-120"
+				SecondHeightMin="-130"
+				SecondHeightMax="-120"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectile130"
+		EditorName="JapanAntiVehicleShipMissileProjectile130">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-135"
+				FirstHeightMax="-125"
+				SecondHeightMin="-135"
+				SecondHeightMax="-125"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		id="JapanAntiVehicleShipMissileProjectile130_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectile130_Veteran">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-135"
+				FirstHeightMax="-125"
+				SecondHeightMin="-135"
+				SecondHeightMax="-125"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectile150"
+		EditorName="JapanAntiVehicleShipMissileProjectile150">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-155"
+				FirstHeightMax="-145"
+				SecondHeightMin="-155"
+				SecondHeightMax="-145"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		id="JapanAntiVehicleShipMissileProjectile150_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectile150_Veteran">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-155"
+				FirstHeightMax="-145"
+				SecondHeightMin="-155"
+				SecondHeightMax="-145"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectile175"
+		EditorName="JapanAntiVehicleShipMissileProjectile175">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-180"
+				FirstHeightMax="-170"
+				SecondHeightMin="-180"
+				SecondHeightMax="-170"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		id="JapanAntiVehicleShipMissileProjectile175_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectile175_Veteran">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-180"
+				FirstHeightMax="-170"
+				SecondHeightMin="-180"
+				SecondHeightMax="-170"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase"
+		id="JapanAntiVehicleShipMissileProjectile190"
+		EditorName="JapanAntiVehicleShipMissileProjectile190">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-195"
+				FirstHeightMax="-185"
+				SecondHeightMin="-195"
+				SecondHeightMax="-185"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="JapanAntiVehicleShipMissileProjectileBase_Veteran"
+		id="JapanAntiVehicleShipMissileProjectile190_Veteran"
+		EditorName="JapanAntiVehicleShipMissileProjectile190_Veteran">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-195"
+				FirstHeightMax="-185"
+				SecondHeightMin="-195"
+				SecondHeightMax="-185"
+				FirstPercentIndent="66"
+				SecondPercentIndent="66"
+				GroundHitFX="FX_JAP_ChopperMissileHit"
+				MaxDistanceReachedFX="FX_JAP_ChopperMissileHit"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+</AssetDeclaration>
