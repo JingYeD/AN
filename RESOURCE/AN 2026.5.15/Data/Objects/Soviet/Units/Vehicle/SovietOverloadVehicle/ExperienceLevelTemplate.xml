@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="instance" source="DATA:Items/Base/BaseExperienceLevelTemplate.xml" />
+	</Includes>
+
+	<ExperienceLevelTemplate id="SovietOverloadVehicleExperienceLevel_1" inheritFrom="ExperienceLevel_SovietRank1" RequiredExperience="1" ExperienceAward="2000">
+		<Target>SovietOverloadVehicle</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate id="SovietOverloadVehicleExperienceLevel_2" inheritFrom="ExperienceLevel_SovietRank2" Prerequisite="SovietOverloadVehicleExperienceLevel_1" RequiredExperience="6000" ExperienceAward="4000">
+		<Target>SovietOverloadVehicle</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate id="SovietOverloadVehicleExperienceLevel_3" inheritFrom="ExperienceLevel_SovietRank3" Prerequisite="SovietOverloadVehicleExperienceLevel_2" RequiredExperience="12000" ExperienceAward="6000">
+		<Target>SovietOverloadVehicle</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate id="SovietOverloadVehicleExperienceLevel_4" inheritFrom="ExperienceLevel_SovietRank4" Prerequisite="SovietOverloadVehicleExperienceLevel_3" RequiredExperience="18000" ExperienceAward="8000">
+		<Target>SovietOverloadVehicle</Target>
+	</ExperienceLevelTemplate>
+</AssetDeclaration>

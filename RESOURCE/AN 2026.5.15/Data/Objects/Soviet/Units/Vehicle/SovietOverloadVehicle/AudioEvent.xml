@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="instance" source="DATA:SageXml/Sounds/BaseSoundEffect.xml" />
+	</Includes>
+
+	<AudioEvent id="GDIMARVVoiceAttack"
+		inheritFrom="AudioEvent:BaseUnitResponse"
+		Volume = "110"
+		MinVolume = "105"
+		Priority = "HIGH"
+		Type = "WORLD PLAYER VOICE"
+		SubmixSlider = "VOICE" >
+		<PitchShift Low="-1" High="1" />
+		<Sound>GUMarv_voicAttaa</Sound>
+		<Sound>GUMarv_voicAttab</Sound>
+		<Sound>GUMarv_voicAttac</Sound>
+		<Sound>GUMarv_voicAttad</Sound>
+		<Sound>GUMarv_voicAttae</Sound>
+		<Sound>GUMarv_voicAttaf</Sound>
+		<Sound>GUMarv_voicAttag</Sound>
+		<Sound>GUMarv_voicAttah</Sound>
+		<Sound>GUMarv_voicAttai</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDIMARVVoiceRetreat"
+		inheritFrom="AudioEvent:BaseUnitResponse"
+		Volume = "110"
+		MinVolume = "105"
+		Priority = "HIGH"
+		Type = "WORLD PLAYER VOICE"
+		SubmixSlider = "VOICE">
+		<Sound>GUMarv_voicRetra</Sound>
+		<Sound>GUMarv_voicRetrb</Sound>
+		<Sound>GUMarv_voicRetrc</Sound>
+		<Sound>GUMarv_voicRetrd</Sound>
+		<Sound>GUMarv_voicRetre</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDIMARVVoiceCreate"
+	inheritFrom="AudioEvent:BaseUnitResponse"
+	Volume = "150"
+	MinVolume = "150"
+	Priority = "HIGH"
+	Type = "WORLD PLAYER VOICE"
+	SubmixSlider = "VOICE">
+		<Sound>GUMarv_voicCreab</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDIMARVVoiceMove"
+	inheritFrom="AudioEvent:BaseUnitResponse"
+	Volume = "110"
+	MinVolume = "105"
+	Priority = "HIGH"
+	Type = "WORLD PLAYER VOICE"
+	SubmixSlider = "VOICE">
+		<Sound>GUMarv_voicMovea</Sound>
+		<Sound>GUMarv_voicMoveb</Sound>
+		<Sound>GUMarv_voicMovec</Sound>
+		<Sound>GUMarv_voicMoved</Sound>
+		<Sound>GUMarv_voicMovee</Sound>
+		<Sound>GUMarv_voicMovef</Sound>
+		<Sound>GUMarv_voicMoveg</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDIMARVVoiceMoveAttack"
+	inheritFrom="AudioEvent:BaseUnitResponse"
+	Volume = "110"
+	MinVolume = "105"
+	Priority = "HIGH"
+	Type = "WORLD PLAYER VOICE"
+	SubmixSlider = "VOICE">
+		<Sound>GUMarv_voiMovAtta</Sound>
+		<Sound>GUMarv_voiMovAttb</Sound>
+		<Sound>GUMarv_voiMovAttc</Sound>
+		<Sound>GUMarv_voiMovAttd</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDIMARVVoiceSelectMS"
+	inheritFrom="AudioEvent:BaseUnitResponse"
+	Volume = "110"
+	MinVolume = "105"
+	Priority = "HIGH"
+	Type = "WORLD PLAYER VOICE"
+	SubmixSlider = "VOICE">
+		<Sound>GUMarv_voicSelea</Sound>
+		<Sound>GUMarv_voicSeleb</Sound>
+		<Sound>GUMarv_voicSelec</Sound>
+		<Sound>GUMarv_voicSeled</Sound>
+		<Sound>GUMarv_voicSelee</Sound>
+		<Sound>GUMarv_voicSelef</Sound>
+		<Sound>GUMarv_voicSeleg</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDIMARVVoiceSelectBattle"
+	inheritFrom="AudioEvent:BaseUnitResponse"
+	Volume = "110"
+	MinVolume = "105"
+	Priority = "HIGH"
+	Type = "WORLD PLAYER VOICE"
+	SubmixSlider = "VOICE" >
+		<PitchShift Low="-1" High="1" />
+		<Sound>GUMarv_voicSelea</Sound>
+		<Sound>GUMarv_voicSeleb</Sound>
+		<Sound>GUMarv_voicSelec</Sound>
+		<Sound>GUMarv_voicSeled</Sound>
+		<Sound>GUMarv_voicSelee</Sound>
+		<Sound>GUMarv_voicSelef</Sound>
+		<Sound>GUMarv_voicSeleg</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="GDIMARVVoiceSelectUnderFire"
+inheritFrom="AudioEvent:BaseUnitResponse"
+Volume = "110"
+MinVolume = "105"
+Priority = "HIGH"
+Type = "WORLD PLAYER VOICE"
+SubmixSlider = "VOICE">
+		<Sound>GUMarv_voicSelea</Sound>
+		<Sound>GUMarv_voicSeleb</Sound>
+		<Sound>GUMarv_voicSelec</Sound>
+		<Sound>GUMarv_voicSeled</Sound>
+		<Sound>GUMarv_voicSelee</Sound>
+		<Sound>GUMarv_voicSelef</Sound>
+		<Sound>GUMarv_voicSeleg</Sound>
+	</AudioEvent>
+
+<AudioEvent
+	id="SOV_ProtoSickle_WeaponRocketFire"
+	inheritFrom="AudioEvent:BaseSoundEffect"
+	Volume="=$WEAPON_FIRE"
+	VolumeShift="-10"
+	Limit="3"
+	Priority="HIGH"
+	Type="WORLD SHROUDED EVERYONE"
+	Control="INTERRUPT"
+	SubmixSlider="SOUNDFX">
+	<NonInterruptibleTime Low="0.0s" High="0.9s" />
+	<PitchShift
+	Low="-5"
+	High="5" />
+	<Sound>SUProtoSickl_wpnRocketFireA</Sound> <Sound>SUProtoSickl_wpnRocketFireB</Sound> <Sound>SUProtoSickl_wpnRocketFireC</Sound> 
+	<Sound>SUProtoSickl_wpnRocketFireD</Sound> <Sound>SUProtoSickl_wpnRocketFireE</Sound> <Sound>SUProtoSickl_wpnRocketFireF</Sound>
+	</AudioEvent>
+
+	<AudioEvent
+	id="SOV_ProtoSickle_WeaponRocketExplo"
+	inheritFrom="AudioEvent:BaseSoundEffect"
+	Volume="=$WEAPON_IMPACT"
+	VolumeShift="-5"
+	Limit="3"
+	Control="INTERRUPT"
+	Type="WORLD SHROUDED EVERYONE"
+	SubmixSlider="SOUNDFX">
+		<NonInterruptibleTime Low="0.0s" High="1.2s" />
+		<Delay Low="0" High="33" />
+		<PitchShift
+		Low="-5"
+		High="5" />
+		<Sound>SUProtoSickl_wpnRocketExploA</Sound>
+		<Sound>SUProtoSickl_wpnRocketExploB</Sound>
+		<Sound>SUProtoSickl_wpnRocketExploC</Sound>
+		<Sound>SUProtoSickl_wpnRocketExploD</Sound>
+		<Sound>SUProtoSickl_wpnRocketExploE</Sound>
+		<Sound>SUProtoSickl_wpnRocketExploF</Sound>
+	</AudioEvent>
+
+</AssetDeclaration>

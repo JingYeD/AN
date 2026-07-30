@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<LocomotorTemplate
+		id="SovietOverloadVehicleLocomotor"
+		Surfaces="GROUND CRUSHABLE_OBSTACLE CRUSHABLE_WALL"
+		TurnTimeSeconds="5s"
+		TurnTimeDamagedSeconds="5s"
+		MaxSpeedDamaged="75%"
+		AccelerationSeconds="0.2s"
+		BrakingSeconds="0.2s"
+		SlowTurnRadius="0.0"
+		FastTurnRadius="30.0"
+		BehaviorZ="NO_MOTIVE_FORCE"
+		TurnThresholdHS="90d"
+		Appearance="FOUR_WHEELS"
+		UseTerrainSmoothing="true"
+		AccelPitchLimit="0.04r"
+		PitchStiffness="0.25"
+		PitchDamping="0.2"
+		RollStiffness="0.4"
+		RollDamping="0.3"
+		ForwardAccelerationPitchFactor="0.025"
+		LateralAccelerationRollFactor="0.0"
+		CanReverseMove="true"
+		HasSuspension="true"
+		WheelTurnAngle="18d"
+		ClampOrientationToPathTangent="true"
+		ReorientIfTurnTooSharp="true">
+		<BounceKickTerrainMap>TankBounceKickTerrainMapping</BounceKickTerrainMap>
+	</LocomotorTemplate>
+</AssetDeclaration>

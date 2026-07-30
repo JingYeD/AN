@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AttributeModifier
+		id="AttributeModifier_SovietGrinderTriggerNitrousBoost"
+		Category="NONE"
+		Duration="10s"
+		ModelConditionsSet="USER_6">
+		<Modifier Type="SPEED" Value="200%"/>
+	</AttributeModifier>
+	
+	<AttributeModifier
+		id="AttributeModifier_SovietGrinderCollideSelf"
+		Duration="0.25s"
+		ObjectStatusToSet="UNPACKING IMMOBILE NO_SPECIAL_ABILITY" />
+	
+	<AttributeModifier
+		id="AttributeModifier_SovietGrinderSelf"
+		Duration="0.25s"
+		ObjectStatusToSet="IMMOBILE NO_SPECIAL_ABILITY" />
+
+	<AttributeModifier
+		id="AttributeModifier_SovietGrinderParalyze"
+		Category="WEAPON"
+		Duration="0.53s"
+		ObjectStatusToSet="IMMOBILE">
+		<Modifier Type="SPEED" Value="0%"/>
+	</AttributeModifier>
+</AssetDeclaration>

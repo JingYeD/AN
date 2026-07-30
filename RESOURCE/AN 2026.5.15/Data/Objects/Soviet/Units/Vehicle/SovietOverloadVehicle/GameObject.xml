@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xai="uri:ea.com:eala:asset:instance"  xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Tags></Tags>
+	<Includes>
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
+		<Include
+		   type="instance"
+		   source="ART:EX_Headlights.w3x" />
+		<Include type="instance" source="DATA:Objects/BaseObjects/BaseHugeVehicle.xml" />
+	<Include
+		type="instance"
+		source="DATA:BaseObjects/BaseCollapsingObject.xml" />
+	</Includes>
+  
+	<GameObject
+		id="SovietOverloadVehicle"
+		inheritFrom="BaseHugeVehicle"
+		SelectPortrait="Portrait_SovietAntiVehicleVehicleTech3Armor"
+		ButtonImage="Button_SovietAntiVehicleVehicleTech3Armor"
+		Side="Soviet"
+		SubGroupPriority="450"
+		EditorSorting="UNIT"
+		TransportSlotCount="20"
+		BuildTime="50"
+		CommandSet="SovietOverloadVehicleCommandSet"
+		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS SCORE VEHICLE CAN_BE_FAVORITE_UNIT T3_UNIT"
+		WeaponCategory="CANNON"
+		VoicePriority="188"
+		EditorName="SovietOverloadVehicle"
+		Description="Desc:SovietOverloadVehicle"
+		TypeDescription="Type:SovietOverloadVehicle"
+		HealthBoxHeightOffset="30">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:SovietOverloadVehicle</DisplayName>
+		<GameDependency>
+			<RequiredObject>SovietCrane</RequiredObject>
+			<RequiredObject>SovietTechStructure</RequiredObject>
+		</GameDependency>
+		<ObjectResourceInfo>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="4750"/>
+		</ObjectResourceInfo>
+		<ArmorSet
+			Armor="SovietOverloadVehicleArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="SovietOverloadVehicleLocomotor"
+			Condition="NORMAL"
+			Speed="40.0" />
+		<SkirmishAIInformation
+			ConquerMetricsOverrideDPS="250"
+			UnitBuilderStandardCombatUnit="true"
+			TargetDuringCrush="true"
+			CrushSpeedBonus="150"/>
+		<Draws>
+			<TruckDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="3"
+				MaxRecoilDistance="10"
+				RecoilDamping="2"
+				RecoilSettleSpeed="1.5"
+				ExtraPublicBone="BONE_TURRET FXTRACKSL FXTRACKSR BONE_TREAD_FRONT_LEFT BONE_TREAD_FRONT_RIGHT BONE_TREAD_BACK_LEFT BONE_TREAD_BACK_RIGHT 
+				BONE_BARRAL_01 BONE_BARRAL_02 FX_WEAPON_01 FX_WEAPON_02 FX_MISSLE_01 FX_MISSLE_02"
+				TrackMarks="EXTnkTrack"
+				TrackMarksLeftBone="FXTRACKSL"
+				TrackMarksRightBone="FXTRACKSR">
+				<TreadTerrainParticles>DefaultTankTerrainParticleMapping</TreadTerrainParticles>
+				<TreadScrollingMap
+					LeftTrack="BONE_TREAD_FRONT_LEFT"
+					RightTrack="BONE_TREAD_FRONT_RIGHT"
+					SpeedMultiplier="-0.06"
+					TreadDriveSpeedFraction="10%"/>
+				<TreadScrollingMap
+					LeftTrack="BONE_TREAD_BACK_LEFT"
+					RightTrack="BONE_TREAD_BACK_RIGHT"
+					SpeedMultiplier="-0.06"
+					TreadDriveSpeedFraction="10%"/>
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="true">
+					<Model
+						Name="SUOVERLOADTANK_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_WEAPON_" />
+					<WeaponRecoilBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE_BARRAL_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_WEAPON_" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FX_MISSLE_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FX_MISSLE_" />
+					<WeaponFireFXBone
+					   WeaponSlotID="1"
+					   WeaponSlotType="TERTIARY_WEAPON"
+					   BoneName="FX_WEAPON_" />
+					<WeaponRecoilBone
+						WeaponSlotID="1"
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="BONE_BARRAL_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="FX_WEAPON_" />
+					<Turret
+						TurretNameKey="BONE_TURRET"
+						TurretPitch=""
+						TurretID="1" />
+					<!--TURRET_PITCH-->
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="SUOVERLOADTANK_SKN" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="SUOVERLOADTANK_SKN" />
+			        <ParticleSysBone
+				        BoneName="BONE_SPEAKER"
+				        FXParticleSystemTemplate="VehicleDamageSmoke"
+				        FollowBone="true" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="SUOVERLOADTANK_SKN" />
+					<Texture
+						Original="SUOverloadTank"
+						New="SUOverloadTank_D" />
+			        <ParticleSysBone
+				        BoneName="BONE_SPEAKER"
+				        FXParticleSystemTemplate="VehicleDamageSmoke"
+				        FollowBone="true" />
+					<ParticleSysBone
+				        BoneName="BONE_SPEAKER"
+				        FXParticleSystemTemplate="VehicleDamageFire"
+				        FollowBone="true" />
+					<ParticleSysBone
+						BoneName="BONE_SPEAKER"
+						FXParticleSystemTemplate="VehicleDamageFire02"
+						FollowBone="true" />
+				</ModelConditionState>
+
+				<AnimationState
+				   ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="SUOVERLOADTANK_MOVA"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+			</TruckDraw>
+
+			<xi:include
+				href="DATA:Includes/ParachuteDrawSoviet.xml"
+				xpointer="xmlns(n=uri:ea.com:eala:asset) xpointer(/n:ParachuteDraws/child::*)" />
+
+			<!-- include Headlight draw module. -->
+			<xi:include
+					  href="DATA:Includes/HeadlightDraw2.xml"
+					  xpointer="xmlns(n=uri:ea.com:eala:asset) xpointer(/n:HeadlightDraw2/child::*)" />
+
+		</Draws>
+		<Behaviors>
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="SovietOverloadVehicleCannonWeapon"
+						ForbiddenObjectStatus="GENERIC_TOGGLE_STATE"/>
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						Template="SovietOverloadVehicleRocketWeapon"
+						ForbiddenObjectStatus="GENERIC_TOGGLE_STATE"/>
+					<Weapon
+						Ordering="TERTIARY_WEAPON"
+						Template="SovietOverloadVehicleSpecialPowerCannonWeapon"
+						ObjectStatus="GENERIC_TOGGLE_STATE"/>
+					<TurretSettings
+						TurretTurnRate="90"
+						MinimumPitch="-10d"
+						AllowsPitch="false"
+						TurretPitchRate="60"
+						PitchHeight="75%"
+						IdleTurnRateModifier="10%"
+						InvalidIdleScanObjectStatus="SPECIALABILITY_ACTIVE"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="4.0s"
+						MinIdleScanAngle="30.0"
+						MaxIdleScanAngle="50.0"
+						ComeToHaltJiggle="1d">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" 
+							IdleScanDelay="=$FAST_IDLE_SCAN_DELAY"/>
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<Physics
+				id="ModuleTag_Physics" />
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="SovietOverloadVehicle_Die_OCL">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			<xi:include
+				href="DATA:Includes/SovietTerrorDroneSpawnUpgradePlayerPower.xml" />
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_SOV_ApocalypseDie" />
+				<Event
+					Index="onDeath"
+					FX="FX_LargeBuildingDieExplosionRumble" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+			   id="ModuleTag_OverloadVehicleDeathWeapon"
+			   InitiallyActive="true"
+			   DeathWeapon="SovietOverloadVehicleDeathWeapon"
+			   ContinueToBezierDestination="false">
+				<DieMuxData
+				 DeathTypes="ALL"
+				 DeathTypesForbidden="SUICIDED"/>
+			</FireWeaponWhenDead>
+			<!--
+			<SpecialPower
+				id="ModuleTag_ArmorPiercingShell"
+				xai:joinAction="Replace"
+				SpecialPowerTemplate="SpecialPower_ArmorPiercingShell"
+				UpdateModuleStartsAttack="true"/>-->
+			<!--ModelConditionsOnUnpack=""-->
+			<!--
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_ArmorPiercingShellSpecialAbilityUpdate"
+				SpecialPowerTemplate="SpecialPower_ArmorPiercingShell"
+				WeaponSlotType="PRIMARY_WEAPON"
+				WeaponSlotID="1"
+				SpecialWeapon="SovietOverloadVehicleSpecialPowerCannonWeapon"
+				StartAbilityRange="300"
+				UnpackTime="1.5s"
+				PackTime="0.0s"
+				TriggerSound="ALL_JavelinSoldier_MissileFire"/>-->
+			<SpecialPower
+				id="ModuleTag_ArmorPiercingShell"
+				SpecialPowerTemplate="SpecialPower_ArmorPiercingShell"
+				UpdateModuleStartsAttack="true"
+				AttributeModifier="AttributeModifier_SovietArmorPiercingShell"
+				AttributeModifierAffectsSelf="true"/>
+			<SpecialAbilityUpdate
+				id="ModuleTag_SpecialAbilityUpdate1"
+				SpecialPowerTemplate="SpecialPower_ArmorPiercingShell"
+				Options="RECONSTITUTE_STORED_COMMAND"/>
+
+			<SpecialPower
+				id="ModuleTag_RechargeArmorPiercingShell"
+				SpecialPowerTemplate="SpecialPower_RechargeArmorPiercingShell"
+				OnTriggerRechargeSpecialPower="SpecialPower_ArmorPiercingShell"
+				UpdateModuleStartsAttack="true"/>
+			<SpecialAbilityUpdate
+				id="ModuleTag_SpecialAbilityUpdate2"
+				SpecialPowerTemplate="SpecialPower_RechargeArmorPiercingShell"
+				Options="RECONSTITUTE_STORED_COMMAND"/>
+
+			<ModelConditionUpgrade
+				id="ModuleTag_AllFactionUpgrade"
+				AddConditionFlags="USER_5">
+				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
+			</ModelConditionUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_VeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+
+			<xi:include
+				href="DATA:Includes/SovietCrushUpgradePlayerPower.xml" />
+
+			<LUAEventList
+                id="ModuleTag_AttackDetection"
+                EventListName="AttackingDetectionFunctions"
+		    />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StateMachine="UnitAIStateMachine">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="true"/>
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="5000" />
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_ShrunkenVoice">
+				<ModelConditionSound Sound="SOV_Apocalypse_VoiceShrunken" RequiredFlags="SHRINK_EFFECT" />
+			</ModelConditionAudioLoopClientBehavior>
+			<ModelConditionSoundSelectorClientBehavior id="ModuleTag_HarpoonEnabled">
+				<Override RequiredFlags="WEAPONSTATE_ONE">
+					<AudioArrayVoice>
+						<AudioEntry Sound="SOV_Apocalypse_VoiceAttackSpecial" AudioType="voiceAttack" />
+					</AudioArrayVoice>
+				</Override>
+			</ModelConditionSoundSelectorClientBehavior>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_HarpoonLoop">
+				<ModelConditionSound Sound="SOV_ApocalypseTank_HarpoonLoop" RequiredFlags="WEAPONSTATE_ONE ATTACKING" ExcludedFlags="MOVING"/>
+				<ModelConditionSound Sound="SOV_Apocalypse_WeaponStartup" RequiredFlags="WEAPONSTATE_ONE" />
+				<!-- currently AudioEvent is empty -->
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				MajorRadius="38.5654"
+				MinorRadius="19.6818"
+				Height="19.9175"
+				ContactPointGeneration="VEHICLE">
+				<Offset x="-2.29265" y="0.725676" z="-0.99051"/>
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="17.8172"
+				MinorRadius="12.3995"
+				Height="16.5753"
+				ContactPointGeneration="VEHICLE">
+				<Offset x="-16.0585" y="0.725676" z="18.0503"/>
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="GDIMARVVoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="GDIMARVVoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="GDIMARVVoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="GDIMARVVoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="GDIMARVVoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="GDIMARVVoiceSelectMS" AudioType="voiceSelect" />
+			<AudioEntry Sound="GDIMARVVoiceSelectBattle" AudioType="voiceSelectBattle" />
+			<AudioEntry Sound="GDIMARVVoiceSelectUnderFire" AudioType="voiceSelectUnderFire" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="SOV_Apocalypse_IdleLoop"
+				AudioType="soundAmbient" />
+			<AudioEntry
+				Sound="SOV_Apocalypse_MoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="SOV_Apocalypse_MoveLoop"
+				AudioType="soundMoveLoop" />
+			<AudioEntry
+				Sound="VehicleCrush"
+				AudioType="soundCrushing" />	
+		</AudioArraySound>
+		<VisionInfo
+			VisionRange="410"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			CrusherLevel="30"
+			CrushableLevel="31"
+			CrushWeapon="SovietCrushWeapon"
+			CrushDecelerationPercent="80%">
+		</CrusherInfo>
+		
+	</GameObject>
+	
+
+	
+<GameObject
+		id="SovietOverloadVehicle_Collapse"
+		inheritFrom="BaseCollapsingObject"
+		EditorName="SovietOverloadVehicle_Collapse">
+		<Draws>
+			<DynamicsDraw
+			id="ModuleTag_Draw"
+			Collision="NONINTERCOLLIDING"
+			FlingPerturbation="15"
+			Explodiness="5" >
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="SUOVERLOADTANK_COL" />
+					<Texture
+						Original="SUOverloadTank"
+						New="SUOverloadTank_D" />
+
+					<ParticleSysBone
+						BoneName="Bone_D_02"
+						FXParticleSystemTemplate="GDIMARVDamagedFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone_D_02"
+						FXParticleSystemTemplate="GDIMARVDamagedFireDist"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone_D_02"
+						FXParticleSystemTemplate="GDIMARVDamagedSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone_D_02"
+						FXParticleSystemTemplate="GDIMARVDamagedSmoke2"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone_D_02"
+						FXParticleSystemTemplate="GDIMARVDamagedFlash"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone_D_02"
+						FXParticleSystemTemplate="GDIMARVDamagedSparks"
+						FollowBone="true" />
+
+				</ModelConditionState>
+
+				<BoneVolumes>
+
+					<BoneVolume BoneName="Bone_D_01" Mass="58813" Spinniness="1.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="39.219" HalfSizeY="18.7606" HalfSizeZ="7.89474" >
+		                    <Translation x="-1.95246" y="-0.339559" z="7.89474" />
+		                    <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                    </Box>
+                    </BoneVolume>
+                    <BoneVolume BoneName="Bone_D_03" Mass="1304" Spinniness="3.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="25.0201" HalfSizeY="2.50201" HalfSizeZ="2.05811" >
+		                    <Translation x="18.3047" y="-8.41223" z="21.5254" />
+		                    <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                    </Box>
+                     </BoneVolume>
+                    <BoneVolume BoneName="Bone_D_04" Mass="1304" Spinniness="3.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="25.0201" HalfSizeY="2.50201" HalfSizeZ="2.05811" >
+		                    <Translation x="18.3047" y="8.412" z="21.5254" />
+		                    <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                    </Box>
+                    </BoneVolume>
+                    <BoneVolume BoneName="Bone_D_05" Mass="42" Spinniness="3.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="3.50984" HalfSizeY="0.413761" HalfSizeZ="2.87336" >
+		                    <Translation x="16.8767" y="19.5971" z="7.08151" />
+		                    <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                    </Box>
+                    </BoneVolume>
+                    <BoneVolume BoneName="Bone_D_06" Mass="36" Spinniness="3.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="1.75085" HalfSizeY="1.40068" HalfSizeZ="1.46343" >
+		                    <Translation x="26.0021" y="14.4842" z="14.1304" />
+		                    <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                    </Box>
+                    </BoneVolume>
+                    <BoneVolume BoneName="Bone_D_07" Mass="42" Spinniness="3.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="3.50984" HalfSizeY="0.413761" HalfSizeZ="2.87336" >
+		                    <Translation x="-10.1403" y="19.5867" z="7.08151" />
+		                    <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                    </Box>
+                    </BoneVolume>
+                    <BoneVolume BoneName="Bone_D_08" Mass="42" Spinniness="3.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="3.50984" HalfSizeY="0.413761" HalfSizeZ="2.87336" >
+		                <Translation x="-17.069" y="19.6683" z="7.08151" />
+		                <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                </Box>
+                    </BoneVolume>
+                    <BoneVolume BoneName="Bone_D_09" Mass="42" Spinniness="3.0" ContactTag="DEBRIS" >
+	                    <Box HalfSizeX="3.50984" HalfSizeY="0.413761" HalfSizeZ="2.87336" >
+		                    <Translation x="2.8294" y="-19.5799" z="7.08151" />
+		                    <Rotation x="0.0" y="0.0" z="0.0" w="1.0" />
+	                    </Box>
+                    </BoneVolume>
+				
+				</BoneVolumes>
+				<Lifetime
+					Delay="5s"
+					FadeTime="4s" />
+			</DynamicsDraw>
+
+		</Draws>
+
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifeTime"
+				MinLifetime="4s"
+				MaxLifetime="5s" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="1s"
+				SinkRate="1.5"
+				DestructionDelay="8s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+		</Behaviors>
+
+	</GameObject>
+
+</AssetDeclaration>

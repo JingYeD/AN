@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ART:Units/SovietOverloadTank/Button_SovietAntiVehicleVehicleTech3Armor.xml"/>
+		<Include type="all" source="ART:Units/SovietOverloadTank/Portrait_SovietAntiVehicleVehicleTech3Armor.xml"/>
+	</Includes>
+	<Texture id="AlliedAntiVehicleVehicleTech1FXFire03VET" 
+			 File="ART:Units/SovietOverloadTank/FX_Texture/AlliedAntiVehicleVehicleTech1FXFire03VET.tga"/>
+	<Texture id="FXBlast02" 
+			 File="ART:Units/SovietOverloadTank/FX_Texture/FXBlast02.dds" />
+	<Texture id="FXDirtClumps"
+			 File="ART:Units/SovietOverloadTank/FX_Texture/FXDirtClumps.dds" />
+	<Texture id="FXEmbersLight" 
+			 File="ART:Units/SovietOverloadTank/FX_Texture/FXEmbersLight.dds"/>
+	<Texture id="FXLenzFlare01"
+			 File="ART:Units/SovietOverloadTank/FX_Texture/FXLenzFlare01.dds" />
+	<Texture id="FXLenzFlare04"
+			 File="ART:Units/SovietOverloadTank/FX_Texture/FXLenzFlare04.dds" />
+	<Texture id="FXsmokeplume"
+			 File="ART:Units/SovietOverloadTank/FX_Texture/FXsmokeplume.dds" />
+	<Texture id="FXSphereNRM"
+			 File="ART:Units/SovietOverloadTank/FX_Texture/FXSphereNRM.dds" />
+
+	<Texture id="TankLongRocket" File="ART:Units/SovietOverloadTank/TankLongRocket.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+	<PackedTextureImage
+		id="TankLongRocket"
+		Texture="TankLongRocket"
+		Rotated="false">
+		<Dimensions
+			x="106"
+			y="106"/>
+		<Coords
+			x="0"
+			y="0"/>
+		<TextureDimensions
+			x="106"
+			y="106"/>
+	</PackedTextureImage>
+</AssetDeclaration>

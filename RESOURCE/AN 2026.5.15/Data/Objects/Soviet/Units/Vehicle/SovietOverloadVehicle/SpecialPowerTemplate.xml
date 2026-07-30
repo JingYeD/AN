@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SpecialPowerTemplate
+        id="SpecialPower_ArmorPiercingShell"
+        ReloadTime="40s"
+        TargetType="NONE"
+		PreventConditions="WEAPON_UPGRADED_02 WEAPON_UPGRADED_03"
+		RequiredConditions="WEAPON_UPGRADED_01"
+        NameOfVoiceNameToUseAsInitiateIntendToDoVoice="voiceAttack"
+        Flags="WATER_OK CANNOT_LEAVE_ENCLOSURE TARGET_NEEDS_OBJECT_STATUS"
+        WaypointModeTerminal="false" >
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_RechargeArmorPiercingShell"
+		TargetType="NONE"
+		WaypointModeTerminal="false">
+	</SpecialPowerTemplate>
+</AssetDeclaration>

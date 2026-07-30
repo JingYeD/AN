@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include source="art:fxring01.xml" type="instance"/>
+	    <Include source="art:fxfirescroll3.xml" type="instance"/>
+		<Include source="art:fxfractilenrm.xml" type="instance"/>
+	</Includes>
+	<FXList id="FX_ALL_JapanBomber_BombExplosion">
+		<NuggetList>
+			<ParticleSystem
+				Particle="GDIMStrike_Debris"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Dirt"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Distortion"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_DustRing"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_DustTrail"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Exp01"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_ExpDebris"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_ExpEmbers"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Flash"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Glow"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_GlowIn"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Ring"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Ring01"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Scorch"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Streaks"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Streaks01"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem	Particle="AlliedBombExplosionShockwave"/>
+			<ParticleSystem	Particle="AlliedBombExplosionLight"/>
+			<ParticleSystem	Particle="AlliedBombExplosionFire"/>
+			<ParticleSystem	Particle="AlliedBombExplosionFireMushroom"/>
+			<ParticleSystem	Particle="AlliedBombExplosionFlash"/>
+			<ParticleSystem	Particle="AlliedBombExplosionGlow"/>
+			<!--
+			<ParticleSystem Particle="JapanBaloon_Ring"/> 
+			<ParticleSystem Particle="JapanBaloonBomb"/>		
+			-->
+			<ParticleSystem Particle="JapanBalloonStreaks"/>
+			<ParticleSystem Particle="JapanBalloonBits"/>
+			<!-- Water FX -->
+
+			<TerrainScorch
+				Type="RANDOM"
+				Weather="NORMAL"
+				Radius="50" >
+				<RandomRange
+					Low="SCORCH_9"
+					High="SCORCH_16" />
+			</TerrainScorch>
+			<!-- Water FX -->
+			<ParticleSystem
+			  Particle="SovietV4RocketExplosionWake"
+			  OnlyIfOnWater ="true">
+			</ParticleSystem>
+			<ParticleSystem
+			  Particle="SovietV4RocketExplosionWaterMist"
+			  OnlyIfOnWater ="true">
+			</ParticleSystem>
+			<ViewShake
+				Type = "NORMAL" />
+			<Sound Value="ALL_CenturyBomber_BombExplosion" />
+		</NuggetList>
+	</FXList>
+	<FXList id="FX_ALL_JapanBomber_BombExplosion_Vet">
+		<NuggetList>
+			<ParticleSystem
+				Particle="GDIMStrike_Debris"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Dirt"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Distortion"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_DustRing"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_DustTrail"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Exp01"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_ExpDebris"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_ExpEmbers"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Flash"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Glow"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_GlowIn"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Ring"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Ring01"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Scorch"
+				OrientToObject="true"
+				OnlyIfOnLand="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Streaks"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIMStrike_Streaks01"
+				OrientToObject="true"
+				Ricochet="true">
+				<Offset x="0.0" y="0.0" z="10.0" />
+			</ParticleSystem>
+			<ParticleSystem	Particle="AlliedBombExplosionBits_Vet"/>
+			<ParticleSystem	Particle="AlliedBombExplosionShockwave_Vet"/>
+			<ParticleSystem	Particle="AlliedBombExplosionLight_Vet"/>
+			<ParticleSystem	Particle="AlliedBombExplosionFire_Vet"/>
+			<ParticleSystem	Particle="AlliedBombExplosionFireMushroom_Vet"/>
+			<ParticleSystem	Particle="AlliedBombExplosionFlash_Vet"/>
+			<ParticleSystem	Particle="AlliedBombExplosionGlow"/>
+			<ParticleSystem	Particle="AlliedBombExplosionAfterFire"/>
+			<!--
+			<ParticleSystem Particle="JapanBaloon_Ring"/> 
+			<ParticleSystem Particle="JapanBaloonBomb"/>		
+			-->
+			<ParticleSystem Particle="JapanBalloonStreaks"/>
+			<ParticleSystem Particle="JapanBalloonBits"/>
+			<!-- Water FX -->
+
+			<TerrainScorch
+				Type="RANDOM"
+				Weather="NORMAL"
+				Radius="50" >
+				<RandomRange
+					Low="SCORCH_9"
+					High="SCORCH_16" />
+			</TerrainScorch>
+			<!-- Water FX -->
+			<ParticleSystem
+			  Particle="SovietV4RocketExplosionWake"
+			  OnlyIfOnWater ="true">
+			</ParticleSystem>
+			<ParticleSystem
+			  Particle="SovietV4RocketExplosionWaterMist"
+			  OnlyIfOnWater ="true">
+			</ParticleSystem>
+			<ViewShake
+				Type = "NORMAL" />
+			<Sound Value="ALL_CenturyBomber_BombExplosion" />
+		</NuggetList>
+	</FXList>
+
+</AssetDeclaration>

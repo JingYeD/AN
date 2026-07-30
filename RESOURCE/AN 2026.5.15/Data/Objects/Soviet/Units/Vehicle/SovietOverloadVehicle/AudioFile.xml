@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AudioFile id="GUMarv_voicAttaa" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttaa.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttab" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttab.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttac" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttac.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttad" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttad.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttae" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttae.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttaf" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttaf.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttag" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttag.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttah" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttah.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicAttai" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicAttai.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicMovea" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicMovea.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicMoveb" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicMoveb.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicMovec" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicMovec.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicMoved" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicMoved.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicMovee" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicMovee.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicMovef" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicMovef.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicMoveg" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicMoveg.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicCreab" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicCreab.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicRetra" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicRetra.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicRetrb" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicRetrb.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicRetrc" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicRetrc.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicRetrd" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicRetrd.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicRetre" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicRetre.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voiMovAtta" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voiMovAtta.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voiMovAttb" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voiMovAttb.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voiMovAttc" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voiMovAttc.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voiMovAttd" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voiMovAttd.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicSelea" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicSelea.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicSeleb" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicSeleb.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicSelec" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicSelec.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicSeled" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicSeled.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicSelee" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicSelee.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicSelef" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicSelef.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="GUMarv_voicSeleg" File="AUDIO:Units/SovietOverloadVehicle/GUMarv_voicSeleg.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+
+	<AudioFile id="SUProtoSickl_wpnRocketFireA" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketFireA.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketFireB" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketFireB.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketFireC" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketFireC.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketFireD" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketFireD.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketFireE" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketFireE.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketFireF" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketFireF.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+
+	<AudioFile id="SUProtoSickl_wpnRocketExploA" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketExploA.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketExploB" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketExploB.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketExploC" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketExploC.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketExploD" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketExploD.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketExploE" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketExploE.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+	<AudioFile id="SUProtoSickl_wpnRocketExploF" File="AUDIO:Units/SovietOverloadVehicle/SUProtoSickl_wpnRocketExploF.wav" GUIPreset="Default" PCCompression="XAS" IsStreamedOnPC="false" />
+
+</AssetDeclaration>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ART:Units/SovietOverloadTank/SUOverloadTank_SKN.w3x" />
+		<Include type="all" source="ART:Units/SovietOverloadTank/SUOverloadTank_COL.w3x" />
+        <Include type="all" source="ART:Units/SovietOverloadTank/SovietAntiVehicleVehicleTech3TankTankShell.w3x"/>
+		<Include type="all" source="ART:Units/SovietOverloadTank/SUOVERLOADTANK_MOVA.w3x"/>
+		<Include type="all" source="ART:Units/SovietOverloadTank/OVERLORDTANK_MISSLE.MISSLE.w3x"/>
+		<Include type="all" source="ART:Units/SovietOverloadTank/OVERLORDTANK_MISSLE.SKIN_MISSLE.w3x"/>
+		<Include type="all" source="ART:Units/SovietOverloadTank/SUOverloadTank_D.xml"/>
+
+	</Includes>
+</AssetDeclaration>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="Grinder.xml" />
+		<Include type="all" source="Reaper.xml" />
+		<Include type="all" source="SovietAntiInfantryVehicle.xml" />
+		<Include type="all" source="SovietAntiStructureVehicle.xml" />
+		<Include type="all" source="SovietAntiVehicleVehicleTech1.xml" />
+		<Include type="all" source="SovietAntiVehicleVehicleTech2.xml" />
+		<Include type="all" source="SovietAntiVehicleVehicleTech3.xml" />
+		<Include type="all" source="SovietMCV.xml" />
+		<Include type="all" source="SovietMiner.xml" />
+		<Include type="all" source="SovietOverloadVehicle.xml" />
+		<Include type="all" source="SovietSurveyor.xml" />
+      </Includes>
+</AssetDeclaration>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<WeaponTemplate
+		id="ScatterableWeapon">
+		<ScatterRadiusVsType
+			Radius="70.0"
+			RequiredModelConditions="SHRINK_EFFECT">
+			<Filter
+				Rule="ANY"
+				Include="INFANTRY AIRCRAFT VEHICLE HUGE_VEHICLE" />
+		</ScatterRadiusVsType>
+		<ScatterRadiusVsType
+			Radius="70.0"
+			RequiredModelConditions="SPECIAL_POWER_2">
+			<Filter
+				Rule="NONE">
+				<IncludeThing>JapanAntiVehicleVehicleTech1</IncludeThing>
+			</Filter>
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="SovietOverloadVehicleCannonWeapon"
+		inheritFrom="ScatterableWeapon"
+		AttackRange="300.0"
+		MinimumAttackRange="50"
+		WeaponSpeed="2000"
+		WeaponRecoil="2d"
+		FireFX="FX_SovietMARVCannon"
+		FireVeteranFX="FX_SovietMARVCannonVet"
+		FireSound="SOV_ApocalypseTank_CannonFire"
+		ClipSize="2"
+		ShotsPerBarrel="1"
+		ReAcquireDetailType="PRE_FIRE"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
+		RadiusDamageAffects="ENEMIES"
+		CanFireWhileMoving="true">
+		<FiringDuration
+			MinSeconds="1.5s"
+			MaxSeconds="1.5s" />
+		<ClipReloadTime
+			MinSeconds="4s"
+			MaxSeconds="4s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="SovietEpicTank3HarpoonProjectile"
+				WarheadTemplate="SovietOverloadVehicleCannonWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietEpicTank3HarpoonProjectileVet"/>		
+			</ProjectileNugget>
+			<!--SovietEpicTank3HarpoonProjectileDummy-->
+			<SuppressionNugget
+				Radius="75.0"
+				Suppression="75"
+				DurationSeconds="2s" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="SovietOverloadVehicleCannonWeaponWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+        Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER">
+		<Nuggets>
+			<DamageNugget
+				Damage="400.0"
+				DamageTaperOff="200"
+				Radius="30.0"
+				DamageType="CANNON"
+				DamageFXType="SOVIET_CANNON"
+				DeathType="EXPLODED" >
+				<DamageScalarDetails Scalar= "100%">
+					<Filter
+					     Rule="ANY"
+					     Include="INFANTRY">
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "100%">
+					<Filter
+					Rule="NONE">
+						<IncludeThing>JapanAntiStructureVehicle</IncludeThing>
+						<IncludeThing>SovietAntiStructureVehicle</IncludeThing>
+						<IncludeThing>AlliedAntiStructureVehicle</IncludeThing>
+						<IncludeThing>AlliedArtilleryVehicle</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+			<MetaImpactNugget
+					ShockWaveAmount="50.0"
+					ShockWaveRadius="15.0"
+					ShockWaveZMult="1" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietOverloadVehicleSpecialPowerCannonWeapon"
+		inheritFrom="SovietOverloadVehicleCannonWeapon"
+		ClipSize="1">
+		<Nuggets xai:joinAction="Replace">
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleSpecialPowerProjectile"
+				WarheadTemplate="SovietOverloadVehicleSpecialPowerCannonWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleSpecialPowerProjectileVet"/>
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="75.0"
+				Suppression="75"
+				DurationSeconds="2s" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="SovietOverloadVehicleSpecialPowerCannonWeaponWarhead"
+		inheritFrom="SovietOverloadVehicleCannonWeaponWarhead">
+		<Nuggets xai:joinAction="Replace">
+			<DamageNugget
+				Damage="500.0"
+				DamageTaperOff="250"
+				Radius="30.0"
+				DamageType="EXPLOSIVE"
+				DamageFXType="SOVIET_CANNON"
+				DeathType="EXPLODED" >
+				<DamageScalarDetails Scalar= "125%">
+					<Filter
+					Rule="NONE">
+						<IncludeThing>SovietAntiVehicleVehicleTech3</IncludeThing>
+						<IncludeThing>SovietOverloadVehicle</IncludeThing>
+						<IncludeThing>JapanAntiVehicleVehicleTech3</IncludeThing>
+						<IncludeThing>AlliedFutureTank</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+			<MetaImpactNugget
+					ShockWaveAmount="50.0"
+					ShockWaveRadius="15.0"
+					ShockWaveZMult="1" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietOverloadVehicleRocketWeapon"
+		inheritFrom="ScatterableWeapon"
+		AttackRange="300.0"
+		MinimumAttackRange="10"
+		WeaponSpeed="300"
+		MinWeaponSpeed="295"
+		MaxWeaponSpeed="305"
+		FireSound="SOV_ProtoSickle_WeaponRocketFire"
+		FireFX=""
+		FireVeteranFX=""
+		AcceptableAimDelta="10d"
+		ClipSize="10"
+		CanFireWhileMoving="true"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		RequiredAntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE" >
+		<FiringDuration
+				MinSeconds="0.25s"
+				MaxSeconds="0.25s" />
+		<ClipReloadTime
+				MinSeconds="2.5s"
+				MaxSeconds="2.5s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile30"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile30_Vet"/>
+				<SpecialObjectFilter
+					Rule="ALL"
+					Include="AIRCRAFT">
+					<ExcludeThing>JapanScoutInfantry</ExcludeThing>
+					<ExcludeThing>JapanAntiVehicleInfantryTech3</ExcludeThing>
+					<ExcludeThing>JapanAntiInfantryVehicle</ExcludeThing>
+					<ExcludeThing>JapanAntiAirVehicleTech1</ExcludeThing>
+					<ExcludeThing>JapanAntiAirShip</ExcludeThing>
+					<ExcludeThing>SovietAntiGroundAircraft</ExcludeThing>
+					<ExcludeThing>SovietFighterAircraft</ExcludeThing>
+					<ExcludeThing>SovietBomberAircraft</ExcludeThing>
+					<ExcludeThing>AlliedAntiGroundAircraft</ExcludeThing>
+					<ExcludeThing>AlliedFighterAircraft</ExcludeThing>
+					<ExcludeThing>AlliedSupportAircraft</ExcludeThing>
+					<ExcludeThing>AlliedBomberAircraft</ExcludeThing>
+					<ExcludeThing>AlliedAntiNavalScout</ExcludeThing>
+					<ExcludeThing>AlliedGunshipAircraft</ExcludeThing>
+					<ExcludeThing>JapanFortressShip</ExcludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile50"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile50_Vet"/>
+				<SpecialObjectFilter
+					Rule="NONE"
+					StatusBitFlags="TAGGED">
+					<IncludeThing>JapanAntiAirShip</IncludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile50"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile50_Vet"/>
+				<SpecialObjectFilter
+					Rule="NONE">
+					<IncludeThing>AlliedAntiNavalScout</IncludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile125"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile125_Vet"/>
+				<SpecialObjectFilter
+					Rule="NONE">
+					<IncludeThing>JapanAntiVehicleInfantryTech3</IncludeThing>
+					<IncludeThing>AlliedSupportAircraft</IncludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile130"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile130_Vet"/>
+				<SpecialObjectFilter
+					Rule="NONE">
+					<IncludeThing>JapanScoutInfantry</IncludeThing>
+					<IncludeThing>JapanAntiAirVehicleTech1</IncludeThing>
+					<IncludeThing>SovietAntiGroundAircraft</IncludeThing>
+					<IncludeThing>JapanFortressShip</IncludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile150"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile150_Vet"/>
+				<SpecialObjectFilter
+					Rule="NONE"
+					StatusBitFlagsExclude="TAGGED">
+					<IncludeThing>JapanAntiAirShip</IncludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile175"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile175_Vet"/>
+				<SpecialObjectFilter
+					Rule="NONE">
+					<IncludeThing>JapanAntiInfantryVehicle</IncludeThing>
+					<IncludeThing>SovietFighterAircraft</IncludeThing>
+					<IncludeThing>SovietBomberAircraft</IncludeThing>
+					<IncludeThing>AlliedAntiGroundAircraft</IncludeThing>
+					<IncludeThing>AlliedFighterAircraft</IncludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<ProjectileNugget
+				ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile190"
+				WarheadTemplate="SovietOverloadVehicleRocketWeaponWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietOverloadVehicleRocketWeaponProjectile190_Vet"/>
+				<SpecialObjectFilter
+					Rule="NONE">
+					<IncludeThing>AlliedBomberAircraft</IncludeThing>
+					<IncludeThing>AlliedGunshipAircraft</IncludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="10.0"
+				Suppression="10"
+				DurationSeconds="5.0s" />
+			<InformTargetNugget
+					 MaxTimeToImpactFudgeFactor="1.6" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietOverloadVehicleRocketWeaponWarhead"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		Flags="NOT_ATTRACTED_BY_MAGNETS"
+		ProjectileCollidesWith =""
+		RequiredAntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE" >
+		<Nuggets>
+			<DamageNugget
+				Damage="42.5"
+				Radius="10.0"
+				DamageTaperOff="0"
+				DamageType="ROCKET"
+				DamageFXType="ALLIED_MISSILE"
+				DeathType="EXPLODED">
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietOverloadVehicleRocket_Die"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND">
+		<Nuggets>
+			<DamageNugget
+				Damage="42.5"
+				DamageTaperOff="0"
+				Radius="10.0"
+				DamageType="ROCKET"
+				DeathType="EXPLODED"
+				PartitionFilterTestType="CIRCLE"
+				RadiusAffectsBridges="true">
+				<SpecialObjectFilter
+					Rule="NONE"
+					StatusBitFlags="GENERIC_TOGGLE_STATE">
+					<IncludeThing>AlliedAntiNavyShipTech1</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietOverloadVehicleDeathWeapon"
+		AttackRange="5.0"
+		WeaponSpeed="999999.0"
+		PreAttackFX="FX_None"
+		FireFX="FX_SovPPXP_New"
+		CanFireWhileMoving="false"
+		ClipSize="1"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		<PreAttackDelay
+		  MinSeconds="0.5s"
+		  MaxSeconds="0.5s" />
+		<FiringDuration
+			MinSeconds="3s"
+			MaxSeconds="3s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="750"
+				DamageTaperOff="300"
+				DelayTimeSeconds="0.5s"
+				Radius="125"
+				DamageType="EXPLOSIVE"
+				DeathType="EXPLODED">
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietOverloadVehicleRechargeBoostConditionWeapon"
+		Flags="NOT_ATTRACTED_BY_MAGNETS"
+		AttackRange="999999.0"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
+		RadiusDamageAffects="NOT_SIMILAR ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<AttributeModifierNugget
+				AttributeModifierOwnerName="AttributeModifier_RechargeBoost"
+				ForbiddenTargetModelCondition="FIRING_OR_RELOADING_C">
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate 
+		id="Leech_OverloadVehicle" 
+		inheritFrom="SovietOverloadVehicleCannonWeapon"
+		ClipSize="1"/>
+</AssetDeclaration>

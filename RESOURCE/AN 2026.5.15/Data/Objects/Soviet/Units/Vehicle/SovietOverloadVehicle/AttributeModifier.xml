@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AttributeModifier
+		id="AttributeModifier_SovietArmorPiercingShell"
+		Category="NONE"
+		Duration="1.5s"
+		ObjectStatusToSet="GENERIC_TOGGLE_STATE">
+		<Modifier Type="RECHARGE_TIME" Value="9999%"/>
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_RechargeBoost"
+		Duration="1s"
+		ModelConditionsSet="USER_3">
+		<Modifier Type="RECHARGE_TIME" Value="3.34%"/>
+	</AttributeModifier>
+</AssetDeclaration>

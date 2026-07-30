@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<LogicCommand
+	    Type="UNIT_BUILD"
+	    id="Command_ConstructSovietOverloadVehicle">
+		<Object>SovietOverloadVehicle</Object>
+	</LogicCommand>
+	<LogicCommandSet id="SovietOverloadVehicleCommandSet">
+		<Cmd>Command_AttackMove</Cmd>
+		<Cmd>Command_MoveToPositionAndCollect</Cmd>
+		<Cmd>Command_ArmorPiercingShell</Cmd>
+		<Cmd>Command_RechargeArmorPiercingShell</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommand
+		id="Command_ArmorPiercingShell"
+		Type="SPECIAL_POWER">
+		<SpecialPower>SpecialPower_ArmorPiercingShell</SpecialPower>
+		<AISpecialPowerInfo
+			Heuristic="INSTAKILL"
+			Manager="MICRO_MANAGER"
+			TargetObjectInclude="CAN_ATTACK"
+			MinTargetsHit="1">
+		</AISpecialPowerInfo>
+	</LogicCommand>
+	<UnitAbilityButtonTemplate
+		id="UnitAbilityButtonArmorPiercingShell"
+		LogicCommand="Command_ArmorPiercingShell">
+		<Data>
+			<TargetedSpecialPower
+				StateData="ButtonStateArmorPiercingShell"
+				ValidTargetCursor="TargetAbility"/>
+		</Data>
+	</UnitAbilityButtonTemplate>
+	<JoypadCommandBarButtonTemplate
+		id="BarButtonArmorPiercingShell">
+		<Data>
+			<TargetedSpecialPower
+				LogicCommand="Command_ArmorPiercingShell"
+				StateData="ButtonStateArmorPiercingShell"/>
+		</Data>
+	</JoypadCommandBarButtonTemplate>
+	<ButtonSingleStateData
+	    id="ButtonStateArmorPiercingShell">
+		<State
+			Image="TankLongRocket"
+			Title="NAME:SpecialPowerArmorPiercingShell"
+			Description="DESC:SpecialPowerArmorPiercingShell"/>
+	</ButtonSingleStateData>
+
+	<LogicCommand
+		id="Command_RechargeArmorPiercingShell"
+		Type="SPECIAL_POWER">
+		<SpecialPower>SpecialPower_RechargeArmorPiercingShell</SpecialPower>
+	</LogicCommand>
+
+</AssetDeclaration>

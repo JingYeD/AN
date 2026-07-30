@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Includes>
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseProjectile.xml"/>
+	</Includes>
+	<GameObject
+		id="SovietEpicTank3HarpoonProjectile"
+		Side="Soviet"
+		EditorSorting="SYSTEM"
+		KindOf="PROJECTILE NO_COLLIDE HIDE_IF_FOGGED"
+		EditorName="SovietEpicTank3HarpoonProjectile">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="SovietAntiVehicleVehicleTech3TankTankShell" />
+					<ParticleSysBone
+						BoneName="FX_Trail01"
+						FXParticleSystemTemplate="EpicCaliberGunTrail"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Trail02"
+						FXParticleSystemTemplate="EpicCaliberGunTrail"
+						FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FXListBehavior
+				id="ModuleTag_FXLists">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_SovietEpicTank3Explosion" />
+				<Event
+					Index="onTerrainCollision"
+					FX="FX_SovietEpicTank3Explosion"/>
+			</FXListBehavior>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL"
+				FirstHeightMin="0"
+				FirstHeightMax="0"
+				SecondHeightMin="0"
+				SecondHeightMax="0"
+				FirstPercentIndent="0"
+				SecondPercentIndent="0"
+				CurveFlattenMinDist="300"
+				FlightPathAdjustDistPerSecond="0"
+				GroundHitFX="">
+			</BezierProjectile>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_ActiveBody"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="0.8">
+			</Shape>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+	<GameObject
+		id="SovietEpicTank3HarpoonProjectileVet"
+		inheritFrom="SovietEpicTank3HarpoonProjectile"
+		EditorName="SovietEpicTank3HarpoonProjectileVet">
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_SovietEpicTank3Explosion_Vet" />
+				<Event
+					Index="onTerrainCollision"
+					FX="FX_SovietEpicTank3Explosion_Vet"/>
+			</FXListBehavior>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		id="SovietEpicTank3HarpoonProjectileDummy"
+		inheritFrom="SovietEpicTank3HarpoonProjectile"
+		EditorName="SovietEpicTank3HarpoonProjectileDummy">
+		<Draws>
+			<ScriptedModelDraw
+				xai:joinAction="Replace"
+				id="ModuleTag_ScriptedModelDraw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				xai:joinAction="Remove"
+				id="ModuleTag_FXLists">
+			</FXListBehavior>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		id="SovietOverloadVehicleSpecialPowerProjectile"
+		inheritFrom="SovietEpicTank3HarpoonProjectile"
+		EditorName="SovietOverloadVehicleSpecialPowerProjectile">
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_ALL_JapanBomber_BombExplosion" />
+				<Event
+					Index="onTerrainCollision"
+					FX="FX_ALL_JapanBomber_BombExplosion"/>
+			</FXListBehavior>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		id="SovietOverloadVehicleSpecialPowerProjectileVet"
+		inheritFrom="SovietOverloadVehicleSpecialPowerProjectile"
+		EditorName="SovietOverloadVehicleSpecialPowerProjectileVet">
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists"
+				xai:joinAction="Replace">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_ALL_JapanBomber_BombExplosion_Vet" />
+				<Event
+					Index="onTerrainCollision"
+					FX="FX_ALL_JapanBomber_BombExplosion_Vet"/>
+			</FXListBehavior>
+		</Behaviors>
+	</GameObject>
+
+    <GameObject
+		id="SovietOverloadVehicleRocketWeaponProjectileBase"
+		inheritFrom="BaseProjectile"
+		KindOf="-NO_COLLIDE" 
+		Side="Soviet"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectileBase">
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+                <ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+                    <Model
+					    Name="OVERLORDTANK_MISSLE.MISSLE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietShipV4TrailFire"/>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietShipV4TrailFireLight"/>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietShipV4TrailSmoke"/>
+                 </ModelConditionState>
+             </ScriptedModelDraw>
+         </Draws>
+         <Behaviors>
+            <FXListBehavior
+			    id="ModuleTag_FXLists">
+                <DieMuxData
+				  DeathTypes="ALL" />
+                <Event
+				  Index="onDeath"
+				  FX="FX_HeavyWalkerRocketHit_New" />
+          </FXListBehavior>
+			 <FireWeaponWhenDead
+				id="ModuleTag_FinalWeapon"
+				InitiallyActive="true"
+				ContinueToBezierDestination="true"
+				DeathWeapon="SovietOverloadVehicleRocket_Die">
+				 <DieMuxData
+					 DeathTypes="ALL" />
+			 </FireWeaponWhenDead>
+          </Behaviors>
+          <Geometry
+			IsSmall="true">
+          <Shape
+				Type="SPHERE"
+				MajorRadius="0.1"></Shape>
+          </Geometry>
+          </GameObject>
+
+          <!-- VETERAN -->
+          <GameObject
+		  id="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		  inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		  EditorName="SovietOverloadVehicleRocketWeaponProjectileBase_Vet">
+              <Draws>
+                <ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+				xai:joinAction="Replace">
+                    <ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+                    <Model
+						Name="OVERLORDTANK_MISSLE.MISSLE" />
+						<ParticleSysBone
+						    BoneName="NONE"
+						    FXParticleSystemTemplate="SovietShipV4TrailFire_Vet"/>
+						<ParticleSysBone
+							BoneName="NONE"
+							FXParticleSystemTemplate="SovietShipV4TrailFireLight_Vet"/>
+						<ParticleSysBone
+							BoneName="NONE"
+							FXParticleSystemTemplate="SovietShipV4TrailSmoke"/>
+                    </ModelConditionState>
+                </ScriptedModelDraw>
+              </Draws>
+        <Behaviors>
+             <FXListBehavior
+				 id="ModuleTag_FXList"
+                 xai:joinAction="Replace" >
+                 <DieMuxData
+					DeathTypes="ALL" />
+				 <Event
+					Index="onDeath"
+					FX="FX_HeavyWalkerRocketHitVet_New" />
+             </FXListBehavior>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		id="SovietOverloadVehicleRocketWeaponProjectile30"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile30">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-35"
+				FirstHeightMax="-25"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		id="SovietOverloadVehicleRocketWeaponProjectile30_VeT"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile30_Vet">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-35"
+				FirstHeightMax="-25"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		id="SovietOverloadVehicleRocketWeaponProjectile50"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile50">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-55"
+				FirstHeightMax="-45"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		id="SovietOverloadVehicleRocketWeaponProjectile50_Vet"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile50_Vet">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-55"
+				FirstHeightMax="-45"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		id="SovietOverloadVehicleRocketWeaponProjectile125"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile125">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-130"
+				FirstHeightMax="-120"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		id="SovietOverloadVehicleRocketWeaponProjectile125_Vet"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile125_Vet">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-130"
+				FirstHeightMax="-120"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		id="SovietOverloadVehicleRocketWeaponProjectile130"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile130">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-135"
+				FirstHeightMax="-125"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		id="SovietOverloadVehicleRocketWeaponProjectile130_Vet"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile130_Vet">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-135"
+				FirstHeightMax="-125"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		id="SovietOverloadVehicleRocketWeaponProjectile150"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile150">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-155"
+				FirstHeightMax="-145"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		id="SovietOverloadVehicleRocketWeaponProjectile150_Vet"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile150_Vet">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-155"
+				FirstHeightMax="-145"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		id="SovietOverloadVehicleRocketWeaponProjectile175"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile175">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-180"
+				FirstHeightMax="-170"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		id="SovietOverloadVehicleRocketWeaponProjectile175_Vet"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile175_Vet">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-180"
+				FirstHeightMax="-170"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase"
+		id="SovietOverloadVehicleRocketWeaponProjectile190"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile190">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-195"
+				FirstHeightMax="-185"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+	<GameObject
+		inheritFrom="SovietOverloadVehicleRocketWeaponProjectileBase_Vet"
+		id="SovietOverloadVehicleRocketWeaponProjectile190_Vet"
+		EditorName="SovietOverloadVehicleRocketWeaponProjectile190_Vet">
+		<Behaviors>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL PING_PONG_SIDEWAYS_DRIFT"
+				FirstHeightMin="-195"
+				FirstHeightMax="-185"
+				SecondHeightMin="-5"
+				SecondHeightMax="5"
+				FirstPercentIndent="33"
+				SecondPercentIndent="66"
+				SidewaysDrift="50"
+				FlightPathAdjustDistPerSecond="100.0"
+				MaxDistanceToTravel="600.0"
+				/>
+		</Behaviors>
+	</GameObject>
+
+</AssetDeclaration>
