@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="Armor.xml" />
+		<Include type="all" source="AttributeModifier.xml" />
+		<Include type="all" source="Environment.xml" />
+		<Include type="all" source="ExperienceLevels.xml" />
+		<Include type="all" source="Locomotor.xml" />
+		<Include type="all" source="LogicCommand.xml" />
+		<Include type="all" source="LogicCommandSet.xml" />
+		<Include type="all" source="MultiplayerColors.xml" />
+		<Include type="all" source="SpecialPowerTemplates.xml" />
+		<Include type="all" source="upgrade.xml" />
+		<Include type="all" source="Weapon.xml" />
+      </Includes>
+</AssetDeclaration>

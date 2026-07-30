@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="GlobalData/index.xml" />
+		<Include type="all" source="System/index.xml" />
+		<Include type="all" source="UI/index.xml" />
+		<Include type="all" source="Common/index.xml" />
+      </Includes>
+</AssetDeclaration>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ButtonStateDataCommon.xml" />
+		<Include type="all" source="ButtonTemplates.xml" />
+		<Include type="all" source="PlayerTechStoreTemplates.xml" />
+		<Include type="all" source="UnitAbilityButtonTemplates.xml" />
+      </Includes>
+</AssetDeclaration>
