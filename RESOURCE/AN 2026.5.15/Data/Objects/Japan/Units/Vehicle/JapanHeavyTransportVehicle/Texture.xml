@@ -1,0 +1,35 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Texture id="ButtonJapanHeavyTransportVehicle" File="ART:Units/JapanHeavyTransportVehicle/ButtonJapanHeavyTransportVehicle.dds"
+			 OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+	<PackedTextureImage
+		id="ButtonJapanHeavyTransportVehicle"
+		Texture="ButtonJapanHeavyTransportVehicle"
+		Rotated="false">
+		<Dimensions
+			x="106"
+			y="106"/>
+		<Coords
+			x="0"
+			y="0"/>
+		<TextureDimensions
+			x="106"
+			y="106"/>
+	</PackedTextureImage>
+	<Texture id="PortraitJapanHeavyTransportVehicle" File="ART:Units/JapanHeavyTransportVehicle/PortraitJapanHeavyTransportVehicle.dds"
+			 OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+	<PackedTextureImage
+		id="PortraitJapanHeavyTransportVehicle"
+		Texture="PortraitJapanHeavyTransportVehicle"
+		Rotated="false">
+		<Dimensions
+			x="101"
+			y="76"/>
+		<Coords
+			x="0"
+			y="0"/>
+		<TextureDimensions
+			x="101"
+			y="76"/>
+	</PackedTextureImage>
+</AssetDeclaration>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<UpgradeTemplate
+		id="Uprade_Passengers_Vehicle"
+		Type="OBJECT"
+		BuildCost="0"/>
+</AssetDeclaration>

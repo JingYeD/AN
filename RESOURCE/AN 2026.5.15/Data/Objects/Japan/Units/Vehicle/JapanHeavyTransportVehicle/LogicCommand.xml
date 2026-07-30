@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructJapanHeavyTransportVehicle">
+		<Object>JapanHeavyTransportVehicle</Object>
+	</LogicCommand>
+	<LogicCommandSet
+		id="JapanHeavyTransportVehicleCommandSet">
+		<Cmd>Command_DisguisedEvacuate_New</Cmd>
+		<Cmd>Command_MoveToPositionAndCollect</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommand
+        Type="EVACUATE"
+        id="Command_DisguisedEvacuate_New" >
+		<AISpecialPowerInfo Heuristic="DEPLOY" Manager="TACTIC"/>
+	</LogicCommand>
+	<JoypadCommandBarButtonTemplate
+        id="ButtonDisguisedEvacuate_New">
+		<Data>
+			<Evacuate
+			    LogicCommand="Command_DisguisedEvacuate_New"
+				StateData="ButtonStateAbilityDisguisedEvacuate_New"/>
+		</Data>
+	</JoypadCommandBarButtonTemplate>
+	<UnitAbilityButtonTemplate
+        id="ButtonDisguisedEvacuate_New"
+        LogicCommand="Command_DisguisedEvacuate_New">
+		<Data>
+			<Evacuate
+				StateData="ButtonStateAbilityDisguisedEvacuate_New"/>
+		</Data>
+	</UnitAbilityButtonTemplate>
+	<ButtonSingleStateData
+        id="ButtonStateAbilityDisguisedEvacuate_New">
+		<State
+			Image="JUA_Evacuate_Passengers"
+			Title="NAME:AbilityDisguisedEvacuate_New"
+			Description="DESC:AbilityDisguisedEvacuate_New" />
+	</ButtonSingleStateData>
+</AssetDeclaration>

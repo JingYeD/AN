@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="instance" source="FXParticleSystemTemplate/index.xml" />
+	</Includes>
+	<FXList id="FX_JapanEnhancedKamikaze_JUTrans2">
+		<NuggetList>
+			<Sound Value="JAP_BalloonBomb_Impact" />
+			<ParticleSystem
+				Particle="JapanEnhancedDeathRing_JUTrans2"
+				OrientToObject="true" />
+			<ParticleSystem
+				Particle="JapanEnhancedDeathBomb_JUTrans2"
+				OrientToObject="true" />
+			<ParticleSystem
+				Particle="JapanEnhancedDeathLight_JUTrans2"
+				OrientToObject="true" />
+			<ParticleSystem
+				Particle="JapanEnhancedDeathXPSmoke_JUTrans2"
+				OrientToObject="true" />
+			<ParticleSystem
+                Particle="JapanEnhancedDeathSMXP_JUTrans2"
+                OrientToObject="true" />
+			<ParticleSystem
+                Particle="JapanBalloonExplosionWake_JUTrans2"
+                OnlyIfOnWater ="true">
+			</ParticleSystem>
+		</NuggetList>
+	</FXList>
+</AssetDeclaration>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="AudioEvent.xml" />
+		<Include type="all" source="ExperienceLevelTemplate.xml" />
+		<Include type="all" source="FXList.xml" />
+		<Include type="all" source="GameObject.xml" />
+		<Include type="all" source="LogicCommand.xml" />
+		<Include type="all" source="ObjectCreationList.xml" />
+		<Include type="all" source="UpgradeTemplate.xml" />
+		<Include type="all" source="Texture.xml" />
+		<Include type="all" source="W3X.xml" />		
+		<Include type="all" source="WeaponTemplate.xml" />
+      </Includes>
+</AssetDeclaration>

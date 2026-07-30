@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="instance" source="DATA:Items/Base/BaseExperienceLevelTemplate.xml" />
+	</Includes>
+
+	<ExperienceLevelTemplate
+		id="JapanHeavyTransportVehicleExperienceLevel_1"
+		inheritFrom="ExperienceLevel_JapanRank1"
+		RequiredExperience="1"
+		ExperienceAward="1000">
+		<Target>JapanHeavyTransportVehicle</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="JapanHeavyTransportVehicleExperienceLevel_2"
+		inheritFrom="ExperienceLevel_JapanRank2"
+		Prerequisite="JapanHeavyTransportVehicleExperienceLevel_1"
+		RequiredExperience="3000"
+		ExperienceAward="2000">
+		<Target>JapanHeavyTransportVehicle</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="JapanHeavyTransportVehicleExperienceLevel_3"
+		inheritFrom="ExperienceLevel_JapanRank3"
+		Prerequisite="JapanHeavyTransportVehicleExperienceLevel_2"
+		RequiredExperience="6000"
+		ExperienceAward="3000">
+		<Target>JapanHeavyTransportVehicle</Target>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="JapanHeavyTransportVehicleExperienceLevel_4"
+		inheritFrom="ExperienceLevel_JapanRank4"
+		Prerequisite="JapanHeavyTransportVehicleExperienceLevel_3"
+		RequiredExperience="9000"
+		ExperienceAward="4000">
+		<Target>JapanHeavyTransportVehicle</Target>
+	</ExperienceLevelTemplate>
+</AssetDeclaration>

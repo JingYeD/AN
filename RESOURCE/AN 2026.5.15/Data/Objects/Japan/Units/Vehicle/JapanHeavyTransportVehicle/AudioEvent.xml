@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="instance" source="DATA:SageXml/Sounds/BaseSoundEffect.xml" />
+	</Includes>
+
+	<AudioEvent id="JAP_SuddenTransport_VoiceCreate_New1" inheritFrom="AudioEvent:BaseUnitResponse"
+		Volume = "100"
+		MinVolume = "95"
+		Priority = "HIGH"
+		Type = "WORLD PLAYER VOICE"
+		SubmixSlider = "VOICE" >
+		<PitchShift Low="-1" High="1" />
+		<Sound>IUSudde_VoiCreatea</Sound>
+	</AudioEvent>
+	<AudioEvent id="JAP_SuddenTransport_VoiceCreate_New2" inheritFrom="AudioEvent:BaseUnitResponse"
+		Volume = "100"
+		MinVolume = "95"
+		Priority = "HIGH"
+		Type = "WORLD PLAYER VOICE"
+		SubmixSlider = "VOICE" >
+		<PitchShift Low="-1" High="1" />
+		<Sound>IUSudde_VoiCreateb</Sound>
+	</AudioEvent>
+	<AudioEvent id="JAP_SuddenTransport_VoiceSelect_New" inheritFrom="AudioEvent:BaseUnitResponse"
+		Volume = "100"
+		MinVolume = "95"
+		Priority = "HIGH"
+		Type = "WORLD PLAYER VOICE"
+		SubmixSlider = "VOICE" >
+		<PitchShift Low="-1" High="1" />
+		<Sound>IUSudde_VoiCreatec</Sound>
+		<Sound>IUSudde_VoiSelecta</Sound>
+		<Sound>IUSudde_VoiSelectb</Sound>
+		<Sound>IUSudde_VoiSelectc</Sound>
+		<Sound>IUSudde_VoiSelectd</Sound>
+		<Sound>IUSudde_VoiSelecte</Sound>
+		<Sound>IUSudde_VoiSelectf</Sound>
+	</AudioEvent>
+
+	<AudioEvent id="JAP_SuddenTransport_VoiceSelectUnderFire_New" inheritFrom="AudioEvent:BaseUnitResponse"
+		Volume = "100"
+		MinVolume = "95"
+		Priority = "HIGH"
+		Type = "WORLD PLAYER VOICE"
+		SubmixSlider = "VOICE" >
+		<PitchShift Low="-1" High="1" />
+		<Sound>IUSudde_VoiSelUnda</Sound>
+		<Sound>IUSudde_VoiSelUndb</Sound>
+		<Sound>IUSudde_VoiSelUndc</Sound>
+		<Sound>IUSudde_VoiSelUndd</Sound>
+	</AudioEvent>
+	<Multisound id="JAP_SuddenTransport_VoiceSelectLandMS_New" >
+		<Subsound>JAP_SuddenTransport_VoiceSelect_New</Subsound>
+		<!-- <Subsound>JAP_SuddenTransport_SelectLand</Subsound> -->
+	</Multisound>
+	<Multisound id="JAP_SuddenTransport_VoiceSelectWaterMS_New" >
+		<Subsound>JAP_SuddenTransport_VoiceSelect_New</Subsound>
+		<!-- <Subsound>JAP_SuddenTransport_SelectWater</Subsound> -->
+	</Multisound>
+	<Multisound id="JAP_SuddenTransport_VoiceSelectUnderFireLandMS_New" >
+		<Subsound>JAP_SuddenTransport_VoiceSelectUnderFire_New</Subsound>
+		<!-- <Subsound>JAP_SuddenTransport_SelectLand</Subsound> -->
+	</Multisound>
+	<Multisound id="JAP_SuddenTransport_VoiceSelectUnderFireWaterMS_New" >
+		<Subsound>JAP_SuddenTransport_VoiceSelectUnderFire_New</Subsound>
+		<!-- <Subsound>JAP_SuddenTransport_SelectWater</Subsound> -->
+	</Multisound>
+
+    <Multisound id="JAP_SuddenTransport_VoiceDisguiseMS_New" >
+		<Subsound>JAP_SuddenTransport_VoiceDisguise</Subsound>
+	</Multisound>
+</AssetDeclaration>

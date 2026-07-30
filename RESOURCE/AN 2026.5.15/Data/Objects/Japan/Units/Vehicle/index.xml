@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="JapanAntiAirVehicleTech1.xml" />
+		<Include type="all" source="JapanAntiInfantryVehicle.xml" />
+		<Include type="all" source="JapanAntiStructureVehicle.xml" />
+		<Include type="all" source="JapanAntiVehicleVehicleTech1.xml" />
+		<Include type="all" source="JapanAntiVehicleVehicleTech3.xml" />
+		<Include type="all" source="JapanHeavyTransportVehicle.xml" />
+		<Include type="all" source="JapanLightTransportVehicle.xml" />
+		<Include type="all" source="JapanMCV.xml" />
+		<Include type="all" source="JapanMiner.xml" />
+		<Include type="all" source="Steel Ronin.xml" />
+      </Includes>
+</AssetDeclaration>

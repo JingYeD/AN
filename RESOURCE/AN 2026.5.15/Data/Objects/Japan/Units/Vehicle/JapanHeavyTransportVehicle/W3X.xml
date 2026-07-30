@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include
+			type="all"
+			source="ART:Units/JapanHeavyTransportVehicle/JUTRANSPORTVEHICLE2_NEW_DEF.w3x" />
+		<Include
+			type="all"
+			source="ART:Units/JapanHeavyTransportVehicle/JUTRANSPORTVEHICLE2_NEW_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:Units/JapanHeavyTransportVehicle/BIGXUNLEI/index.xml" />
+		<Include
+			type="all"
+			source="ART:Units/JapanHeavyTransportVehicle/Turret/index.xml" />
+		<Include
+			type="instance"
+			source="ART:Units/JapanHeavyTransportVehicle/JUTransportVehicle2_New_D.xml" />
+	</Includes>
+</AssetDeclaration>
