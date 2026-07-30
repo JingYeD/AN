@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="MagneticSatelliteEffect.xml" />
+		<Include type="all" source="MagneticSingularityEffect.xml" />
+		<Include type="all" source="MagneticSingularityEffectSpawner.xml" />
+		<Include type="all" source="SovietAntiStructureShipV4RocketProjectile.xml" />
+		<Include type="all" source="SovietAntiStructureVehicleMIRVProjectile.xml" />
+		<Include type="all" source="SovietAntiStructureVehicleV4RocketProjectile.xml" />
+		<Include type="all" source="SovietFighterAircraftFlakMissileProjectile.xml" />
+      </Includes>
+</AssetDeclaration>

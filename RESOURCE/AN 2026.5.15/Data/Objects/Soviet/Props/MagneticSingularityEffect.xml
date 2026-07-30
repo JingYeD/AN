@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+		<Include type="all"	source="ART:GPFlareGeo.w3x" />
+	</Includes>
+	<GameObject
+		id="MagneticSingularityEffect"
+		Side="Soviet"
+		EditorSorting="SYSTEM"
+		TransportSlotCount="0"
+		IsTrainable="false"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE INERT_SHROUD_REVEALER SKIRMISH_AI_ATTEMPT_TO_DODGE"
+		EditorName="MagneticSingularityEffect">
+		<DisplayName>MagneticSingularityEffect</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<SkirmishAIInformation
+		  DodgeSafetyDistance="250.0">
+			<DodgeWithUnits Rule="ANY"
+			    Include="VEHICLE INFANTRY">
+				<ExcludeThing>AlliedMiner</ExcludeThing>
+				<ExcludeThing>JapanMiner</ExcludeThing>
+				<ExcludeThing>SovietMiner</ExcludeThing>
+			</DodgeWithUnits>
+		</SkirmishAIInformation>
+		
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+          <ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="TeslaSingularityCoreDistortion"
+						FollowBone="true" />
+          <ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="TeslaSingularityCoreFlare"
+						FollowBone="true" />
+          <ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="TeslaSingularityCoreLight"
+						FollowBone="true" />
+          <ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="TeslaSingularityCoreLightning"
+						FollowBone="true" />          
+        </ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="10.0s"
+				MaxLifetime="10.0s" />
+
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+
+			<SqueezeFlingUpdate
+				id="ModuleTag_SqueezeFlingUpdate"
+				EffectDistance="200"
+				GatherAcceleration="0.2"
+				DelayBetweenVictimsTime="0.01s"
+				ScanTime="0.01s"
+				ModelLength="190.0"
+				ArmTemplate="SovietTeslaSingularity"
+				VictimShader="ShaderOverride_ObjectsTeslaSingularity">
+				<Filter
+					Rule="ANY"
+					Include="VEHICLE INFANTRY STRUCTURE"
+					Exclude="UNATTACKABLE"
+					StatusBitFlagsExclude="SUBMERGED AIRBORNE_TARGET UNDER_IRON_CURTAIN IN_NANOHIVE">
+			    </Filter>
+				<KillFilter
+					Rule="ANY"
+					Include="INFANTRY">
+					<ExcludeThing>SovietScoutVehicle</ExcludeThing>
+					<ExcludeThing>SovietHeavyAntiVehicleInfantry</ExcludeThing>
+					<ExcludeThing>AlliedLegionnaireInfantry</ExcludeThing>
+					<ExcludeThing>SovietDesolatorInfantry</ExcludeThing>
+					<ExcludeThing>JapanAntiVehicleInfantryTech3</ExcludeThing>
+				</KillFilter>
+				<ParticleData
+					SourceBone="FX_BONE01"
+					DestinationBone="FX_BONE02"
+					ParticleSystem="TeslaSingularity"/>
+				<ParticleData
+					SourceBone="FX_BONE02"
+					DestinationBone="FX_BONE03"
+					ParticleSystem="TeslaSingularity"/>
+				<ParticleData
+					SourceBone="FX_BONE03"
+					DestinationBone="FX_BONE04"
+					ParticleSystem="TeslaSingularity"/>
+				<ParticleData
+					SourceBone="FX_BONE04"
+					DestinationBone="FX_BONE05"
+					ParticleSystem="TeslaSingularity"/>
+				<ParticleData
+					SourceBone="FX_BONE05"
+					DestinationBone="FX_BONE06"
+					ParticleSystem="TeslaSingularity"/>
+			</SqueezeFlingUpdate>
+
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate"
+				FireInterval="0.25s"
+				AliveOnly="true"
+				ActiveWhenDisabled="HELD">
+				<FireWeaponNugget
+					WeaponName="MagneticSingularityCircuitWeapon"
+					FireDelay="1.0s"
+					OneShot="false" />
+			</FireWeaponUpdate>
+
+		</Behaviors>
+		<Body>
+			<PropBody
+				id="ModuleTag_Body" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="5.0"
+				Height="1.0"/>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="SOV_MagneticSingularity_Fire" AudioType="soundAmbient"/>
+		</AudioArraySound>
+		<ShadowInfo
+			Type="NONE" />
+		<CrusherInfo
+			id="id_CrusherInfo"
+			CrushableLevel="0" />
+	</GameObject>
+
+	<WeaponTemplate
+		id="MagneticSingularityCircuitWeapon"
+		AttackRange="190.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
+		AcceptableAimDelta="180d"
+		CanFireWhileMoving="true"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		>
+		<FiringDuration
+			MinSeconds=".1s"
+			MaxSeconds=".1s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="25.0"
+				Radius="200.0"
+				DamageType="TESLA"
+				DamageFXType="SOVIET_TESLA"
+				DeathType="ELECTROCUTED">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="STRUCTURE"
+					Exclude="VEHICLE INFANTRY UNATTACKABLE"
+					StatusBitFlags="POWERED_DOWN_EMP"
+					StatusBitFlagsExclude="SUBMERGED AIRBORNE_TARGET UNDER_IRON_CURTAIN IN_NANOHIVE">
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>
