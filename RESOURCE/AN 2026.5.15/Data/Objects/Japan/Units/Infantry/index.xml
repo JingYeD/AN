@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="Archer Maiden.xml" />
+		<Include type="all" source="JapanAntiVehicleInfantry.xml" />
+		<Include type="all" source="JapanAntiVehicleInfantryTech3.xml" />
+		<Include type="all" source="JapanInfiltrationInfantry.xml" />
+		<Include type="all" source="JapanScoutInfantry.xml" />
+      </Includes>
+</AssetDeclaration>

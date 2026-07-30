@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AttributeModifier
+		id="AttributeMod_JapanArcherInfantryEnergyArrow"
+		Category="WEAPON"
+		Duration="5s"
+		StackingLimit="1"
+		StartFX="FX_JapanVehicleExplode"
+		ObjectStatusToSet="IMMOBILE">
+	    <Modifier Type="SPEED" Value="0%"/>
+	</AttributeModifier>
+</AssetDeclaration>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ART:FXNukeMarkA.xml"/>
+		<Include type="all" source="ART:FXHole.xml"/>
+		<Include type="all" source="ART:EX_MechaFootprint.xml"/>
+
+	</Includes>
+	<FXList id="FX_JAP_ChopperMissileHit_New">
+		<NuggetList>
+			<Sound Value="JAP_ChopperVX_MissileImpact" />
+			<ParticleSystem
+					  Particle="FXJapanMIRVHitExplosion_New">
+			</ParticleSystem>
+			<ParticleSystem
+					  Particle="FXJapanMIRVHitGlow_New">
+			</ParticleSystem>
+			<ParticleSystem
+					  Particle="FXJapanMIRVHitLight_New">
+			</ParticleSystem>
+		</NuggetList>
+	</FXList>
+
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+	<FXList id="FX_JAP_ChopperMissileHitVet_New">
+		<NuggetList>
+			<Sound Value="JAP_ChopperVX_MissileImpact" />
+			<ParticleSystem
+					  Particle="FXJapanMIRVHitExplosion_Vet_New">
+			</ParticleSystem>
+			<ParticleSystem
+					  Particle="FXJapanMIRVHitGlow_Vet_New">
+			</ParticleSystem>
+			<ParticleSystem
+					  Particle="FXJapanMIRVHitLight_Vet_New">
+			</ParticleSystem>
+		</NuggetList>
+	</FXList>
+</AssetDeclaration>
