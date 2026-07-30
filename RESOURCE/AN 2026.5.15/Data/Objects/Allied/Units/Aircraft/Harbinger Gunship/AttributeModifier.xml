@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AttributeModifier
+		id="AttributeMod_HarbingerGunshipVision_GunMode"
+		Duration="9999s">
+		<Modifier Type="VISION" Value="76%"/>    
+	</AttributeModifier>
+
+	<AttributeModifier
+		id="AttributeModifier_EndRising"
+		Duration="1s"
+		ObjectStatusToSet="NO_ATTACK SCRAMBLED NON_AUTOACQUIRABLE UNSELECTABLE UNATTACKABLE HIDDEN"
+		ModelConditionsSet="USER_3 HIDDEN">
+	</AttributeModifier>
+</AssetDeclaration>
