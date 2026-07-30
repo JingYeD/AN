@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="Desolator.xml" />
+		<Include type="all" source="Mortar Cycle.xml" />
+		<Include type="all" source="SovietAntiVehicleInfantry.xml" />
+		<Include type="all" source="SovietCommandoTech1.xml" />
+		<Include type="all" source="SovietHeavyAntiVehicleInfantry.xml" />
+      </Includes>
+</AssetDeclaration>
